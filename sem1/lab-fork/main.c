@@ -1,1 +1,0 @@
-/Users/tsyar/desktop/bmstu/bmstu-os/sem1/lab1-linux/main.c
