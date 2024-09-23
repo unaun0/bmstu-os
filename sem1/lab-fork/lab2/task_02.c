@@ -24,7 +24,7 @@ int main(void) {
                 pause();
             exit(0);
         } else {
-            printf("2 PARENT pid: %d, CHILD pid: %d, GROUP: %d\n", getpid(), cpid[i], getpgrp());
+            printf("PARENT pid: %d, CHILD pid: %d, GROUP: %d\n", getpid(), cpid[i], getpgrp());
         }
     }
     printf("\n");
