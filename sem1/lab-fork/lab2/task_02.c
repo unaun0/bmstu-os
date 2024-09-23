@@ -18,10 +18,12 @@ int main(void) {
             perror("can't fork\n");
             exit(1);
         } else if (cpid[i] == 0) {
-            printf("1 CHILD - pid: %d, pgrp: %d, ppid: %d\n", getpid(), getpgrp(), getppid());
+            printf("CHILD - pid: %d, pgrp: %d, ppid: %d\n", getpid(), getpgrp(), getppid());
+
             //sleep(SLEEP_FOR);
             if (i == 0)
                 pause();
+                
             exit(0);
         } else {
             printf("PARENT pid: %d, CHILD pid: %d, GROUP: %d\n", getpid(), cpid[i], getpgrp());
