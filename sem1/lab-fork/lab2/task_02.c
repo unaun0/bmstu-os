@@ -19,7 +19,6 @@ int main(void) {
             exit(1);
         } else if (cpid[i] == 0) {
             printf("CHILD - pid: %d, gpid: %d, ppid: %d\n", getpid(), getpgrp(), getppid());
-
             //sleep(SLEEP_FOR);
             if (i == 0)
                 pause();
