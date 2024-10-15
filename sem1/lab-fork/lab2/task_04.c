@@ -14,7 +14,7 @@ int main(void)
     int wstatus;
     int w;
     char *buf = malloc(100);
-    printf("parent pid: %d\n", getpid());
+    //printf("parent pid: %d\n", getpid());
     if (pipe(fd) == -1)
     {
         perror("cant pipe\n");
@@ -32,7 +32,7 @@ int main(void)
         {
             close(fd[0]);
             write(fd[1], (*msg)[i], strlen((*msg)[i]));
-            printf("msg from child (pid = %d) %s sent to parent\n", getpid(), (*msg)[i]);
+            //printf("msg from child (pid = %d) %s sent to parent\n", getpid(), (*msg)[i]);
             exit(0);
         }
         else
@@ -41,7 +41,11 @@ int main(void)
             printf("parent (pid: %d) recieved msg: %s\n", getpid(), buf);
         }
     }
-    
+    memset(buf, 0, 100);
+    close(fd[1]);
+    read(fd[0], buf, sizeof(*msg));
+    printf("parent (pid: %d) recieved msg: %s\n", getpid(), buf);
+    free(buf);
     for (size_t i = 0; i < 2; ++i)
     {
         w = wait(&wstatus);
@@ -57,9 +61,5 @@ int main(void)
             printf("wait pid: %d, stopped by signal %d\n", w, WSTOPSIG(wstatus));
         }
     }
-    memset(buf, 0, 100);
-    close(fd[1]);
-    read(fd[0], buf, sizeof(*msg));
-    free(buf);
     return 0;
 }
