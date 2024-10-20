@@ -16,10 +16,30 @@
 sigset_t mask;
 
 #define LOCKFILE "/var/run/daemon.pid"
+#define CONFFILE "/etc/daemon.conf"
 #define LOCKMODE (S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH)
 
-void daemonize(const char *cmd)
-{
+void reread(void) {
+    FILE *fp;
+    char username[64];
+    int userID;
+    fp = fopen(CONFFILE, "r");
+    if (fp == NULL) {
+        syslog(LOG_ERR, "unable to open configuration file: %s", strerror(errno));
+    } else {
+        fscanf(fp, "username = %s\n", username);
+        fscanf(fp, "userID = %d", &userID);
+        fclose(fp);
+        syslog(LOG_INFO, "Configuration read: username = %s, userID = %d", username, userID);
+        if (userID > 0) {
+            if (setuid(userID) == -1)
+                syslog(LOG_ERR, "Failed to set userID to %d: %s", userID, strerror(errno));
+            else
+                syslog(LOG_INFO, "Successfully set userID to %d", userID);
+        }
+    }
+}
+void daemonize(const char *cmd) {
     int i, fd0, fd1, fd2;
     pid_t pid;
     struct rlimit rl;
@@ -32,14 +52,14 @@ void daemonize(const char *cmd)
         perror("can't fork");
         exit(1) ;
     }
-    if (pid != 0)
+    if (pid > 0)
         exit(0);
     if (setsid() == -1) {
         perror("can't setsid");
         exit(1) ;
     }
     if (signal(SIGHUP, SIG_IGN) == SIG_ERR) {
-        perror("can't irnore SIGHUP");
+        perror("can't ignore SIGHUP");
         exit(1);
     }
     if (chdir("/") == -1) {
@@ -48,6 +68,7 @@ void daemonize(const char *cmd)
     }
     if (rl.rlim_max == RLIM_INFINITY)
         rl.rlim_max = 1024;
+
     for (i = 0; i < rl.rlim_max; i++)
         close(i);
     fd0 = open("/dev/null", O_RDWR);
@@ -59,24 +80,19 @@ void daemonize(const char *cmd)
         exit(1);
     }
 }
-
 int lockfile(int fd)
 {
     struct flock fl;
-
     fl.l_type = F_WRLCK;
     fl.l_start = 0;
     fl.l_whence = SEEK_SET;
     fl.l_len = 0;
-
     return fcntl(fd, F_SETLK, &fl);
 }
-
 int already_running(void)
 {
     int fd;
     char buf[16];
-
     fd = open(LOCKFILE, O_WRONLY|O_CREAT, LOCKMODE);
     if (fd == -1) {
         syslog(LOG_ERR, "unable to open %s: %s", LOCKFILE, strerror(errno));
@@ -85,7 +101,7 @@ int already_running(void)
     if (lockfile(fd) == -1) {
         if (errno == EACCES || errno == EAGAIN) {
             close(fd);
-            return 1;
+            return(1);
         }
         syslog(LOG_ERR, "unable to block %s: %s", LOCKFILE, strerror(errno));
         exit(1);
@@ -95,11 +111,9 @@ int already_running(void)
     write(fd, buf, strlen(buf) + 1);
     return(0);
 }
-
 void *thr_fn(void *arg)
 {
     int err, signo;
-
     for (;;) {
         err = sigwait(&mask, &signo);
         if (err != 0) {
@@ -109,7 +123,7 @@ void *thr_fn(void *arg)
         switch (signo) {
         case SIGHUP:
             syslog(LOG_INFO, "SIGHUP received; reading configuration file\n");
-
+            reread();
             break;
         case SIGTERM:
             syslog(LOG_INFO, "SIGTERM received; exiting\n");
@@ -120,7 +134,6 @@ void *thr_fn(void *arg)
     }
     return 0;
 }
-
 int main(int argc, char *argv[])
 {
     time_t t;
@@ -128,14 +141,11 @@ int main(int argc, char *argv[])
     pthread_t tid;
     char *cmd;
     struct sigaction sa;
-
-    printf("login before daemonize:%s\n", getlogin());
-    
+    printf("login before daemonize:%s\n", getlogin()); 
     if ((cmd = strrchr(argv[0], '/')) == NULL)
         cmd = argv[0];
     else
-        cmd++;
-        
+        cmd++;   
     daemonize(cmd);
     if (already_running()) {
         syslog(LOG_ERR, "%s: daemon already running", cmd);
@@ -158,13 +168,13 @@ int main(int argc, char *argv[])
         syslog(LOG_ERR, "unable to create thread");
         exit(1);
     }
-    syslog(LOG_INFO, "Login after daemonize:%s\n", getlogin());
+    syslog(LOG_INFO, "login after daemonize:%s\n", getlogin());
     while (1) {
         t = time(NULL);
         struct tm tm = *localtime(&t);
-        syslog(LOG_INFO, "%s: Current time is: %02d:%02d:%02d\n",
+        syslog(LOG_INFO, "%s: current time is: %02d:%02d:%02d\n",
                 cmd, tm.tm_hour, tm.tm_min, tm.tm_sec);
-        sleep(1);
+        sleep(10);
     }
-    return 0;
+    exit(0);
 }
