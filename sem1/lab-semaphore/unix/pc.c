@@ -101,7 +101,7 @@ int main() {
             exit(0);
         }
     }
-    for (short i = 0; i < 3; ++i) {
+    for (short i = 0; i < 4; ++i) {
         if ((child_pid = fork()) == -1) {
             perror("can't fork.\n");
             return 1;
@@ -111,7 +111,7 @@ int main() {
         }
     }
     int wstatus;
-    for (short i = 0; i < 6; ++i) {
+    for (short i = 0; i < 7; ++i) {
         pid_t w = wait(&wstatus);
         if (w == -1) {
             perror("wait error");

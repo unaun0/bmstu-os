@@ -24,8 +24,7 @@
 const int PERMS =  S_IRWXU | S_IRWXG | S_IRWXO;
 int *shm_buf;
 int sem_id;
-struct sembuf start_read[] = {{WAITING_READERS, V, 0}, {BIN_WRITER, 0, 0}, {WAITING_WRITERS, 0, 0}, 
-                              {ACTIVE_READERS , V, 0}, {WAITING_READERS, P, 0}};
+struct sembuf start_read[] = {{WAITING_READERS, V, 0}, {BIN_WRITER, 0, 0}, {WAITING_WRITERS, 0, 0}, {ACTIVE_READERS , V, 0}, {WAITING_READERS, P, 0}};
 struct sembuf stop_read[] = {{ACTIVE_READERS, P, 0}};
 struct sembuf start_write[] = {{WAITING_WRITERS, V, 0}, {ACTIVE_READERS, 0, 0}, {BIN_WRITER, P, 0}, {WAITING_WRITERS, P, 0}};
 struct sembuf stop_write[] = {{BIN_WRITER, V, 0}};

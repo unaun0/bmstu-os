@@ -40,10 +40,8 @@ void reread(void) {
     }
 }
 void daemonize(const char *cmd) {
-    int i, fd0, fd1, fd2;
-    pid_t pid;
-    struct rlimit rl;
-    umask(0);
+    int i, fd0, fd1, fd2;pid_t pid; struct rlimit rl;
+     umask(0);
     if (getrlimit(RLIMIT_NOFILE, &rl) < 0) {
         fprintf(stderr, "%s: unable to get the maximum file descriptor number", cmd);
         exit(1);
@@ -52,16 +50,16 @@ void daemonize(const char *cmd) {
         perror("can't fork");
         exit(1) ;
     }
-    if (pid > 0)
+    if (pid>0)
         exit(0);
     if (setsid() == -1) {
         perror("can't setsid");
         exit(1) ;
     }
-    if (signal(SIGHUP, SIG_IGN) == SIG_ERR) {
-        perror("can't ignore SIGHUP");
-        exit(1);
-    }
+    // if (signal(SIGHUP, SIG_IGN) == SIG_ERR) {
+    //    perror("can't ignore SIGHUP");
+    //    exit(1);
+    //}
     if (chdir("/") == -1) {
         perror("can't chdir");
         exit(1);
@@ -147,6 +145,7 @@ int main(int argc, char *argv[])
     else
         cmd++;   
     daemonize(cmd);
+    sleep(20);
     if (already_running()) {
         syslog(LOG_ERR, "%s: daemon already running", cmd);
         exit(1);
