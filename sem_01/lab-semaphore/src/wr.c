@@ -8,9 +8,11 @@
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
+#include <errno.h>
 
 #define COUNT_WRITERS 3
 #define COUNT_READERS 5
+
 #define SLEEP 2
 
 #define P -1
@@ -19,17 +21,18 @@
 #define WAITING_READERS 0
 #define ACTIVE_READERS 1
 #define WAITING_WRITERS 2
-#define BIN_WRITER 3
+#define ACTIVE_WRITER 3
+#define BIN_WRITER 4
+#define BIN_READER 5
 
 const int PERMS =  S_IRWXU | S_IRWXG | S_IRWXO;
 int *shm_buf;
 int sem_id;
-struct sembuf start_read[] = {{WAITING_READERS, V, 0}, {BIN_WRITER, 0, 0}, {WAITING_WRITERS, 0, 0}, {ACTIVE_READERS , V, 0}, {WAITING_READERS, P, 0}};
+struct sembuf start_read[] = {{WAITING_READERS, V, 0}, {ACTIVE_WRITER, 0, 0}, {WAITING_WRITERS, 0, 0},{ACTIVE_READERS , V, 0},{WAITING_READERS, P, 0}};
 struct sembuf stop_read[] = {{ACTIVE_READERS, P, 0}};
-struct sembuf start_write[] = {{WAITING_WRITERS, V, 0}, {ACTIVE_READERS, 0, 0}, {BIN_WRITER, P, 0}, {WAITING_WRITERS, P, 0}};
-struct sembuf stop_write[] = {{BIN_WRITER, V, 0}};
+struct sembuf start_write[] = {{WAITING_WRITERS, V, 0},{ACTIVE_READERS, 0, 0},{BIN_WRITER, P, 0},{ACTIVE_WRITER, 0, 0},{ACTIVE_WRITER, 1, 0},{WAITING_WRITERS, P, 0}};
+struct sembuf stop_write[] = {{ACTIVE_WRITER, P, 0}, {BIN_WRITER, V, 0}};
 int flag = 1;
-
 void sig_catch(int sig_num) {
     flag = 0;
     printf("signal %d caught by %d\n", sig_num, getpid());
@@ -39,7 +42,7 @@ void reader(int semid, int* shm) {
     srand(getpid());
     while(flag) {
         sleep(rand() % 3);
-        if (semop(semid, start_read, 4) == -1) {
+        if (semop(semid, start_read, 5) == -1) {
             perror("semop error");
             exit(1);
         }
@@ -57,14 +60,14 @@ void writer(int semid, int* shm) {
     srand(getpid());
     while(flag) {
         sleep(rand() % 3);
-        if (semop(semid, start_write, 4) == -1) {
+        if (semop(semid, start_write, 6) == -1) {
             perror("semop error");
             exit(1);
         }
         (*shm)++;
         printf("writer (pid=%d): %d\n", getpid(), *shm);
         sleep(rand() % SLEEP);
-        if (semop(semid, stop_write, 1) == -1) {
+        if (semop(semid, stop_write, 2) == -1) {
             perror("semop error");
             exit(1);
         }
@@ -79,7 +82,7 @@ int main() {
         perror("signal error");
         exit(1);
     }
-    if ((shm_id = shmget(IPC_PRIVATE, sizeof(int), IPC_CREAT | PERMS)) == -1) {
+    if ((shm_id = shmget(IPC_PRIVATE, 4096, IPC_CREAT | PERMS)) == -1) {
 		perror("shmget error\n");
 		exit(1);
 	}
@@ -90,11 +93,15 @@ int main() {
         exit(1);
     }
     (*shm_buf) = 0;
-    if ((sem_id = semget(IPC_PRIVATE, 5, IPC_CREAT | PERMS)) == -1) {
+    if ((sem_id = semget(IPC_PRIVATE, 6, IPC_CREAT | PERMS)) == -1) {
 		perror("semget error\n");
 		exit(1);
 	}
 	if ((semctl(sem_id, BIN_WRITER, SETVAL, 1)) == -1) {
+		perror("semctl error\n");
+		exit(1);
+	}
+    if ((semctl(sem_id, ACTIVE_WRITER, SETVAL, 0)) == -1) {
 		perror("semctl error\n");
 		exit(1);
 	}
@@ -123,6 +130,17 @@ int main() {
         pid_t w = wait(&wstatus);
         if (w == -1) {
             perror("wait error");
+            switch(errno) {
+                case ECHILD:
+                    printf("the calling process does not have any unwaited-for children.\n");
+                    break;
+                case EINTR:
+                    printf("WNOHANG was not set and an unblocked signal or a SIGCHLD was caught\n");
+                    break;
+                default:
+                    printf("unknown error\n");
+                    break;
+            }
             exit(1);
         }
         if (WIFEXITED(wstatus))
