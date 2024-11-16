@@ -18,6 +18,7 @@
 #define P -1
 #define V 1
 
+
 struct sembuf producer_lock[2] = {{SE, P, 0}, {SB, P, 0}};
 struct sembuf producer_release[2] = {{SB, V, 0}, {SF, V, 0}};
 struct sembuf consumer_lock[2] = {{SF, P, 0}, {SB, P, 0}};
@@ -35,7 +36,7 @@ int producer(char *addr, int semid) {
         sleep(rand() % 3);
         if (semop(semid, producer_lock, 2) == -1) {
             perror("semop error");
-            //printf("errno: %d\n", errno);
+            printf("semop %d, errno %d\n", getpid(), errno);
             exit(1);
         }
         char **prod_cur = (char **)(addr + sizeof(char *));
@@ -45,23 +46,21 @@ int producer(char *addr, int semid) {
         // printf("producer (pid = %d) write: %c\n", getpid(), ch);
         if (semop(semid, producer_release, 2) == -1) {
             perror("semop error");
-            //printf("errno: %d\n", errno);
+            printf("semop %d, errno %d\n", getpid(), errno);
             exit(1);
         }
-        printf("producer (pid = %d) write: %c\n", getpid(), ch);
+        printf("producer (pid = %d): %c\n", getpid(), ch);
     }
     return 0;
 }
 
-бинарный семафор стоп райт инкримет старт
- 
 int consumer(char *addr, int semid) {
     srand(getpid());
     while (flag) {
         sleep(rand() % 2);
         if (semop(semid, consumer_lock, 2) == -1) {
             perror("semop error");
-            //printf("errno: %d\n", errno);
+            printf("semop %d, errno %d\n", getpid(), errno);
             exit(1);
         }
         char **cons_cur = (char **)addr;
@@ -70,10 +69,10 @@ int consumer(char *addr, int semid) {
        // printf("consumer (pid=%d read): %c\n", getpid(), c);
         if (semop(semid, consumer_release, 2) == -1) {
             perror("semop error");
-            //printf("errno: %d\n", errno);
+            printf("semop %d, errno %d\n", getpid(), errno);
             exit(1);
         }
-        printf("consumer (pid=%d read): %c\n", getpid(), c);
+        printf("consumer (pid=%d): %c\n", getpid(), c);
     }
     return 0;
 }
@@ -84,13 +83,11 @@ int main() {
     int shm_fd = shmget(IPC_PRIVATE, 4096, perms);
     if (shm_fd == -1) {
         perror("shmget error");
-        //printf("errno: %d\n", errno);
         exit(1);
     }
     char *addr = (char *)shmat(shm_fd, 0, 0);
     if (addr == (char *)-1) {
         perror("shmat error");
-        //printf("errno: %d\n", errno);
         exit(1);
     }
     char **cons_cur = (char **)addr;
@@ -111,7 +108,8 @@ int main() {
             perror("can't fork.\n");
             exit(1);
         } else if (child_pid == 0) {
-            producer(addr, sem_fd);
+            if (producer(addr, sem_fd) == 1)
+                exit(1);
             exit(0);
         }
     }
@@ -120,7 +118,8 @@ int main() {
             perror("can't fork.\n");
             exit(1);
         } else if (child_pid == 0) {
-            consumer(addr, sem_fd);
+            if (consumer(addr, sem_fd) == 1)
+                exit(1);
             exit(0);
         }
     }
@@ -142,7 +141,6 @@ int main() {
             }
             exit(1);
         }
-
         if (WIFEXITED(wstatus))
             printf("pid=%d, exited, status=%d\n", w, WEXITSTATUS(wstatus));
         else if (WIFSIGNALED(wstatus))
@@ -162,5 +160,5 @@ int main() {
         perror("semctl error");
         exit(1);
     }
-    exit(0);
+    exit(1);
 }
