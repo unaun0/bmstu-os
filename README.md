@@ -2,5 +2,5 @@
 
 | Семестр | Статус |
 |:-|:-:|
-|[5](https://github.com/unaun0/bmstu-os/tree/main/sem_01) |🔄|
-|[6](https://github.com/unaun0/bmstu-os/tree/main/sem_02) |❌|
+|[5](https://github.com/unaun0/bmstu-os/tree/main/sem-01) |🔄|
+|[6](https://github.com/unaun0/bmstu-os/tree/main/sem-02) |❌|
