@@ -1,14 +1,12 @@
 struct REQUEST {
-    int op;
-    int pid;
     int idx;
-    int res;
+    char type;
+    char result;
 };
 
 program PRODCONS_PROG {
     version PRODCONS_VERS {
-        int PRODUCER(REQUEST) = 1;
-        int CONSUMER(REQUEST) = 2;
+        REQUEST service(REQUEST) = 1;
     } = 1;
 } = 0x20000001;
 
