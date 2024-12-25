@@ -1,7 +1,7 @@
 #### Семинары
 
 | **Название** |
-|-:|
+|:-|
 | [**WinX86**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/sem/sem-01.pdf)|
 | [**UNIX. Процессы, часть 1**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/sem/sem-02.pdf)|
 | [**UNIX. Процессы, часть 2**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/sem/sem-03.pdf)|
