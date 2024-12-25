@@ -1,5 +1,5 @@
 #### Содержание
 
-[**Лабораторные работы**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/lab)
-[**Семинары**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/sem)
-[**Подготовка к экзамену**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/exam)
+1. [**Лабораторные работы**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/lab)
+2. [**Семинары**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/sem)
+3. [**Подготовка к экзамену**](https://github.com/unaun0/bmstu-os/tree/main/semester-01/exam)
