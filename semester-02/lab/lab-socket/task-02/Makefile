@@ -9,4 +9,4 @@ c:
 	gcc client.c -o c.out
 
 clean:
-	rm *.out
+	rm -f *.out *.soc
