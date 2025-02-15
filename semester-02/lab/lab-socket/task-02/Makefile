@@ -3,10 +3,10 @@ all:
 	make c
 
 s:
-	gcc server.c -o s.out
+	gcc -std=c99 server.c -o s.out
 
 c:
-	gcc client.c -o c.out
+	gcc -std=c99 client.c -o c.out
 
 clean:
-	rm -f *.out *.soc
+	rm -f *.out *.soc *.sc
