@@ -14,7 +14,7 @@
 #include <time.h>
 #include <pthread.h>
 
-#define SERVER_PORT 12345
+#define SERVER_PORT 9877
 #define SERVER_BACKLOG 5
 
 #define SHM_BUFFER_SIZE 26
@@ -76,7 +76,7 @@ void writer(int client_sock_fd, int idx) {
     char buffer[STR_BUFFER_SIZE];
     memset(buffer, '\0', STR_BUFFER_SIZE);
     if (idx < 0 || idx >= SHM_BUFFER_SIZE) {
-        snprintf(buffer, sizeof(buffer), "error: the selected index is not available.");
+        snprintf(buffer, sizeof(buffer), "error: the selected index is occupied.");
         if (send(client_sock_fd, buffer, sizeof(char) * STR_BUFFER_SIZE, 0) == -1) {
             perror("send error message");
             return;
@@ -85,7 +85,7 @@ void writer(int client_sock_fd, int idx) {
     }
     char ch = shm_buf[idx];
     if (ch == '*') {
-        snprintf(buffer, sizeof(buffer), "error: the selected symbol is not available.");
+        snprintf(buffer, sizeof(buffer), "error: the selected symbol is occupied.");
     } else {
         shm_buf[idx] = '*';
         memset(buffer, '\0', STR_BUFFER_SIZE);

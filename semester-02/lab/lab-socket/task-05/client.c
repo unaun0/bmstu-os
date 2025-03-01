@@ -8,9 +8,9 @@
 #include <time.h>
 #include <pthread.h>
 
-#define THREAD_COUNT 5
+#define THREAD_COUNT 20
 #define SERVER_IP "127.0.0.1"
-#define SERVER_PORT 12345
+#define SERVER_PORT 9877
 #define SHM_BUFFER_SIZE 26
 #define STR_BUFFER_SIZE 255
 #define READER 'r'
@@ -37,7 +37,8 @@ void *client_thread(void *arg) {
     server_addr.sin_port = htons(SERVER_PORT);
     inet_pton(AF_INET, SERVER_IP, &server_addr.sin_addr);
     
-    while (loop_flag) {
+    while (loop_flag) 
+    {
         sleep(rand() % 6 + 3);
         
         if ((sock_fd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
@@ -70,7 +71,7 @@ void *client_thread(void *arg) {
                 close(sock_fd);
                 pthread_exit(NULL);
             }
-            sleep(rand() % 6 + 1);
+            sleep(rand() % 2);
             char result_buffer[STR_BUFFER_SIZE];
             if (recv(sock_fd, result_buffer, STR_BUFFER_SIZE, 0) == -1) {
                 perror("recv buf");

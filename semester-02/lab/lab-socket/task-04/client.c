@@ -10,7 +10,7 @@
 #define CHILD_COUNT 5
 
 #define SERVER_IP "127.0.0.1"
-#define SERVER_PORT 12345
+#define SERVER_PORT 9877
 
 #define SHM_BUFFER_SIZE 26
 #define STR_BUFFER_SIZE 255
@@ -24,13 +24,13 @@ void handler(int s_num);
 
 char ops[] = { READER, WRITER };
 
-int find_first_availiable_index(const char *buffer) {
+int find_first_unoccupied_index(const char *buffer) {
     char *pos = strpbrk(buffer, "abcdefghijklmnopqrstuvwxyz");
     if (pos)
         return (int)(pos - buffer);
     return -1;
 }
-char first_availiable_idx = 0;
+char first_unoccupied_idx = 0;
 
 void client_process() {
     pid_t pid = getpid();
@@ -42,7 +42,7 @@ void client_process() {
     server_addr.sin_port = htons(SERVER_PORT);
     inet_pton(AF_INET, SERVER_IP, &server_addr.sin_addr); 
     while (loop_flag) { 
-        sleep(rand() % 6 + 3);
+        sleep(rand() % 3);
         if ((sock_fd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
             perror("socket");
             exit(EXIT_FAILURE);
@@ -67,12 +67,11 @@ void client_process() {
                 exit(EXIT_FAILURE);
             }
             buffer[SHM_BUFFER_SIZE] = '\0';
-            first_availiable_idx = (char)find_first_availiable_index(buffer);
+            first_unoccupied_idx = (char)find_first_unoccupied_index(buffer);
             printf("CLIENT [PID %d]: buff: %s\n", pid, buffer);
-
         }
         else if (op == 'w') {
-            if (send(sock_fd, &first_availiable_idx, sizeof(first_availiable_idx), 0) == -1) {
+            if (send(sock_fd, &first_unoccupied_idx, sizeof(first_unoccupied_idx), 0) == -1) {
                 perror("send idx");
                 close(sock_fd);
                 exit(EXIT_FAILURE);
@@ -84,7 +83,7 @@ void client_process() {
                 close(sock_fd);
                 exit(EXIT_FAILURE);
             }
-            printf("CLIENT [PID %d]: %s (idx: %d)\n", pid, result_buffer, (int)first_availiable_idx);
+            printf("CLIENT [PID %d]: %s (idx: %d)\n", pid, result_buffer, (int)first_unoccupied_idx);
             close(sock_fd);
         }
     }
