@@ -12,11 +12,13 @@
 #include <sys/stat.h>
 #include <sys/wait.h>
 #include <time.h>
+#include <fcntl.h>
+#include <sys/types.h>
 
 #define SERVER_PORT 9877
 #define SERVER_BACKLOG 5
 
-#define SHM_BUFFER_SIZE 26
+#define SHM_BUFFER_SIZE 52
 #define STR_BUFFER_SIZE 255
 
 #define OP_READER 'r'
@@ -65,48 +67,43 @@ static char *shm_buf;
 int loop_flag = 1;
 int server_sock_fd;
 
-void init();
-void destroy();
-void handler(int s_num);
+void sig_handler(int s_num);
 void cleanup_port(int port);
 
 void writer(int client_sock_fd, int idx) {
     if (semop(sem_id, start_write, 4) == -1) {
         perror("semop start_write");
         close(client_sock_fd);
-        destroy();
         exit(EXIT_FAILURE);
     }
     char buffer[STR_BUFFER_SIZE];
     memset(buffer, '\0', STR_BUFFER_SIZE);
     if (idx < 0 || idx >= SHM_BUFFER_SIZE) {
-        snprintf(buffer, sizeof(buffer), "error: the selected index is occupied.");
+        raise(SIGINT);
+        snprintf(buffer, sizeof(buffer), "error: buffer empty.");
         if (send(client_sock_fd, buffer, sizeof(char) * STR_BUFFER_SIZE, 0) == -1) {
             perror("send error message");
             close(client_sock_fd);
-            destroy();
             exit(EXIT_FAILURE);
         }
         return;
     }
     char ch = shm_buf[idx];
-    if (ch == '*') {
+    if (ch == '-') {
         snprintf(buffer, sizeof(buffer), "error: the selected symbol is occupied.");
     } else {
-        shm_buf[idx] = '*';
+        shm_buf[idx] = '-';
         memset(buffer, '\0', STR_BUFFER_SIZE);
         snprintf(buffer, sizeof(buffer), "%c", ch);
     }
     if (send(client_sock_fd, buffer, sizeof(char) * STR_BUFFER_SIZE, 0) == -1) {
         perror("send result");
         close(client_sock_fd);
-        destroy();
         exit(EXIT_FAILURE);
     }
     if (semop(sem_id, stop_write, 1) == -1) {
         perror("semop stop_write");
         close(client_sock_fd);
-        destroy();
         exit(EXIT_FAILURE);
     }
     printf("server [PID %d]: %s\n", getpid(), buffer);
@@ -116,7 +113,6 @@ void reader(int client_sock_fd) {
     if (semop(sem_id, start_read, 5) == -1) {
         perror("semop start_read");
         close(client_sock_fd);
-        destroy();
         exit(EXIT_FAILURE);
     }
     char buffer[SHM_BUFFER_SIZE + 1];
@@ -125,13 +121,11 @@ void reader(int client_sock_fd) {
     if (send(client_sock_fd, buffer, sizeof(char) * (SHM_BUFFER_SIZE + 1), 0) == -1) {
         perror("send buf");
         close(client_sock_fd);
-        destroy();
         exit(EXIT_FAILURE);
     }
     if (semop(sem_id, stop_read, 1) == -1) {
         perror("semop stop_read");
         close(client_sock_fd);
-        destroy();
         exit(EXIT_FAILURE);
     }
     printf("server [PID %d]: %s\n", getpid(), buffer);
@@ -143,6 +137,12 @@ int main() {
     socklen_t server_len = sizeof(server_addr);
     if ((server_sock_fd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
         perror("socket error");
+        exit(EXIT_FAILURE);
+    }
+    int reuse_addr = 1;
+    if (setsockopt(server_sock_fd, SOL_SOCKET, SO_REUSEADDR, &reuse_addr, sizeof(reuse_addr)) == -1) {
+        perror("setsockopt");
+        close(server_sock_fd);
         exit(EXIT_FAILURE);
     }
     cleanup_port(SERVER_PORT);
@@ -158,67 +158,7 @@ int main() {
         perror("listen error");
         exit(EXIT_FAILURE);
     }
-    init();
-    signal(SIGINT, handler); 
-    struct timeval timeout;
-    timeout.tv_sec = 10;
-    timeout.tv_usec = 0;
-    pid_t child_pid;
-    printf("server started on port %d, pid %d\n", SERVER_PORT, getpid());
-    while (loop_flag) {
-        int client_sock_fd = accept(server_sock_fd, (struct sockaddr*)&client_addr, &client_len);
-        if (client_sock_fd == -1) break;
-        printf("new connection\n");
-        if (setsockopt(client_sock_fd, SOL_SOCKET, SO_RCVTIMEO, (char*)&timeout, sizeof(timeout)) < 0) {
-            perror("setsockopt error");
-            close(client_sock_fd);
-            destroy();
-            exit(EXIT_FAILURE);
-        }
-        if ((child_pid = fork()) == -1) {
-            perror("fork error");
-            close(client_sock_fd);
-            destroy();
-            exit(EXIT_FAILURE);
-        } else if (child_pid == 0) {
-            close(server_sock_fd);
-            char op;
-            if (recv(client_sock_fd, &op, sizeof(op), 0) == -1) {
-                perror("recv op");
-                close(client_sock_fd);
-                destroy();
-                exit(EXIT_FAILURE);
-            }
-            if (op == 'r')
-                reader(client_sock_fd);
-            else if (op == 'w') {
-                char idx;
-                if (recv(client_sock_fd, &idx, sizeof(idx), 0) == -1) {
-                    perror("recv idx");
-                    close(client_sock_fd);
-                    destroy();
-                    exit(EXIT_FAILURE);
-                }
-                writer(client_sock_fd, (int)idx);
-            } else
-                perror("invalid op");
-
-            close(client_sock_fd);
-            exit(EXIT_SUCCESS);
-        }
-        close(client_sock_fd);
-    }
-    destroy();
-    exit(EXIT_SUCCESS);
-}
-
-void handler(int s_num) {
-    loop_flag = 0;
-    shutdown(server_sock_fd, SHUT_RDWR);
-    close(server_sock_fd);
-}
-
-void init() {
+    creat(KEY_FILE, SEM_PERMS);
     key_t key = ftok(KEY_FILE, 0);
     if (key == -1) {
         perror("ftok error");
@@ -231,27 +171,71 @@ void init() {
     shm_buf = shmat(shm_id, NULL, 0);
     if (shm_buf == (void*)-1) {
         perror("shmat error");
-        destroy();
         exit(EXIT_FAILURE);
     }
-    for (size_t i = 0; i < SHM_BUFFER_SIZE; ++i)
-        shm_buf[i] = 'a' + i;
+    size_t index = 0;
+    for (char c = 'a'; c <= 'z' && index < SHM_BUFFER_SIZE; ++c) {
+        shm_buf[index++] = c;
+    }
+    for (char c = 'A'; c <= 'Z' && index < SHM_BUFFER_SIZE; ++c) {
+        shm_buf[index++] = c;
+    }
     if ((sem_id = semget(key, 4, IPC_CREAT | SEM_PERMS)) == -1) {
         perror("semget error");
-        destroy();
         exit(EXIT_FAILURE);
     }
     for (size_t i = 0; i < SEM_COUNT; ++i) {
         if (semctl(sem_id, i, SETVAL, 0) == -1) {
             perror("semctl error");
-            destroy();
             exit(EXIT_FAILURE);
         }
     }
     printf("server resources initialized\n");
-}
+    signal(SIGINT, sig_handler); 
+    struct timeval timeout;
+    timeout.tv_sec = 10;
+    timeout.tv_usec = 0;
+    pid_t child_pid;
+    printf("server started on port %d, pid %d\n", SERVER_PORT, getpid());
+    while (loop_flag) {
+        int client_sock_fd = accept(server_sock_fd, (struct sockaddr*)&client_addr, &client_len);
+        if (client_sock_fd == -1) break;
+        printf("new connection\n");
+        if (setsockopt(client_sock_fd, SOL_SOCKET, SO_REUSEADDR, (char*)&timeout, sizeof(timeout)) < 0) {
+            perror("setsockopt error");
+            close(client_sock_fd);
+            exit(EXIT_FAILURE);
+        }
+        if ((child_pid = fork()) == -1) {
+            perror("fork error");
+            close(client_sock_fd);
+            exit(EXIT_FAILURE);
+        } else if (child_pid == 0) {
+            close(server_sock_fd);
+            char op;
+            if (recv(client_sock_fd, &op, sizeof(op), 0) == -1) {
+                perror("recv op");
+                close(client_sock_fd);
+                exit(EXIT_FAILURE);
+            }
+            if (op == 'r')
+                reader(client_sock_fd);
+            else if (op == 'w') {
+                char idx;
+                if (recv(client_sock_fd, &idx, sizeof(idx), 0) == -1) {
+                    perror("recv idx");
+                    close(client_sock_fd);
+                    exit(EXIT_FAILURE);
+                }
+                writer(client_sock_fd, (int)idx);
+            } else
+                perror("invalid op");
 
-void destroy() {
+            close(client_sock_fd);
+            exit(EXIT_SUCCESS);
+        }
+        close(client_sock_fd);
+    }
     if (shm_buf != (void*)-1)
         shmdt((void*)shm_buf);
     if (shm_id != -1)
@@ -259,6 +243,14 @@ void destroy() {
     if (sem_id != -1)
         semctl(sem_id, 0, IPC_RMID);
     printf("server resources destroyed\n");
+    exit(EXIT_SUCCESS);
+}
+
+void sig_handler(int s_num) {
+    printf("received signal %d\n", s_num);
+    loop_flag = 0;
+    shutdown(server_sock_fd, SHUT_RDWR);
+    close(server_sock_fd);
 }
 
 void cleanup_port(int port) {

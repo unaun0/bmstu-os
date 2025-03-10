@@ -7,16 +7,15 @@
 #include <string.h>
 #include <time.h>
 #include <pthread.h>
+#include <signal.h>
 
-#define THREAD_COUNT 10
+#define THREAD_COUNT 5
 #define SERVER_IP "127.0.0.1"
 #define SERVER_PORT 9877
 #define SHM_BUFFER_SIZE 52
 #define STR_BUFFER_SIZE 255
 #define READER 'r'
 #define WRITER 'w'
-
-#define FILE_TIME "../analyze/pthread_client.txt"
 
 int loop_flag = 1;
 
@@ -28,6 +27,7 @@ int find_first_unoccupied_index(const char *buffer) {
 }
 char first_unoccupied_idx = 0;
 
+#define FILE_TIME "../analyze/select_client.txt"
 FILE *log_file = NULL;
 pthread_mutex_t file_mutex = PTHREAD_MUTEX_INITIALIZER;
 
@@ -39,6 +39,7 @@ void *client_thread(void *arg) {
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(SERVER_PORT);
     inet_pton(AF_INET, SERVER_IP, &server_addr.sin_addr);
+    int op_idx = 0;
     while (loop_flag) 
     {
         // sleep(rand() % 3 + 1);
@@ -122,6 +123,7 @@ int main() {
     }
     pthread_t threads[THREAD_COUNT];
     for (int i = 0; i < THREAD_COUNT; i++) {
+        sleep(rand() % 6 + 3);
         if (pthread_create(&threads[i], NULL, client_thread, NULL) != 0) {
             perror("pthread_create");
             exit(EXIT_FAILURE);
