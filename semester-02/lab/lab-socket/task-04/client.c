@@ -7,6 +7,7 @@
 #include <string.h>
 #include <time.h>
 #include <dispatch/dispatch.h>
+#include <mach/mach_time.h>
 
 #define CHILD_COUNT 10
 
@@ -45,6 +46,7 @@ void client_process() {
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(SERVER_PORT);
     inet_pton(AF_INET, SERVER_IP, &server_addr.sin_addr); 
+    uint64_t start, end;
     while (loop_flag) { 
         sleep(rand() % 2 + 1);
         if ((sock_fd = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
@@ -56,7 +58,7 @@ void client_process() {
             close(sock_fd);
             exit(EXIT_FAILURE);
         }
-        clock_t start_time = clock();
+        start = mach_absolute_time();
         char op = READER;
         if (send(sock_fd, &op, sizeof(op), 0) == -1) {
             perror("send operation");
@@ -101,11 +103,11 @@ void client_process() {
             close(sock_fd);
             exit(EXIT_FAILURE);
         }
-        clock_t total_time = clock() - start_time;
-        printf("CLIENT [PID %d]: %s (idx: %d); time: %ld\n", pid, result_buffer, (int)first_unoccupied_idx, total_time);
+        end = mach_absolute_time() - start;
+        printf("CLIENT [PID %d]: %s (idx: %d); time: %llu\n", pid, result_buffer, (int)first_unoccupied_idx, end);
         if ((first_unoccupied_idx >= 0) && (strlen(result_buffer) == 1)) {
             dispatch_semaphore_wait(file_sem, DISPATCH_TIME_FOREVER);
-            fprintf(log_file, "%ld\n", (long)total_time);
+            fprintf(log_file, "%llu\n", (long long)end);
             dispatch_semaphore_signal(file_sem);
         }
     }

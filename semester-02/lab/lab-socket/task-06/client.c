@@ -8,6 +8,7 @@
 #include <time.h>
 #include <pthread.h>
 #include <signal.h>
+#include <mach/mach_time.h>
 
 #define THREAD_COUNT 5
 #define SERVER_IP "127.0.0.1"
@@ -40,6 +41,7 @@ void *client_thread(void *arg) {
     server_addr.sin_port = htons(SERVER_PORT);
     inet_pton(AF_INET, SERVER_IP, &server_addr.sin_addr);
     int op_idx = 0;
+    uint64_t start, end;
     while (loop_flag) 
     {
         // sleep(rand() % 3 + 1);
@@ -52,7 +54,7 @@ void *client_thread(void *arg) {
             close(sock_fd);
             pthread_exit(NULL);
         }
-        clock_t start_time = clock();
+        start = mach_absolute_time();
         char op = READER;
         if (send(sock_fd, &op, sizeof(op), 0) == -1) {
             perror("send operation");
@@ -96,11 +98,11 @@ void *client_thread(void *arg) {
             pthread_exit(NULL);
         }
         close(sock_fd);
-        clock_t total_time = clock() - start_time;
-        printf("CLIENT [Thread %lu]: %s (idx: %d); time: %ld\n",(unsigned long)pthread_self(), result_buffer, (int)first_unoccupied_idx, total_time);
+        end = mach_absolute_time() - start;
+        printf("CLIENT [Thread %lu]: %s (idx: %d); time: %llu\n",(unsigned long)pthread_self(), result_buffer, (int)first_unoccupied_idx, end);
         if ((first_unoccupied_idx >= 0) && (strlen(result_buffer) == 1)) {
             pthread_mutex_lock(&file_mutex);
-            fprintf(log_file, "%ld\n", (long)total_time);
+            fprintf(log_file, "%llu\n", (long long)end);
             pthread_mutex_unlock(&file_mutex); 
         }
     }

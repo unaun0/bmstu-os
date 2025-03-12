@@ -36,3 +36,5 @@
 * Самый медленный → Процессы (fork), так как создание процесса дорого.
 * Средний вариант → Потоки (threads), быстрее процессов, но при перегрузке могут тормозить.
 * Самый быстрый → Мультиплексоры (epoll, select, kqueue), так как не создают новые потоки/процессы.
+
+[man 'mach_absolute_time'](https://developer.apple.com/documentation/kernel/1462446-mach_absolute_time?changes=la)

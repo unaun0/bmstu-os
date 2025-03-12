@@ -40,7 +40,6 @@ int main() {
     for (int i = 0; i < CLIENT_COUNT; i++) {
         // Вывод строки таблицы с выравниванием
         printf("| %-6d | %-10d | %-11d | %-10d |\n", i + 1, fork_data[i], pthread_data[i], select_data[i]);
-        
         // Суммирование для расчета среднего значения
         fork_sum += fork_data[i];
         pthread_sum += pthread_data[i];
