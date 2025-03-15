@@ -1,0 +1,1151 @@
+CMDLINE:./prodcons_client
+CWD:/home/tshyana/Desktop/proc_info/task-02
+COMM:prodcons_client
+
+EXE:/home/tshyana/Desktop/proc_info/task-02/prodcons_client
+ENVIRON:
+SHELL=/bin/bash	
+SESSION_MANAGER=local/Ubuntu:@/tmp/.ICE-unix/2935,unix/Ubuntu:/tmp/.ICE-unix/2935	
+QT_ACCESSIBILITY=1	
+COLORTERM=truecolor	
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg	
+XDG_MENU_PREFIX=gnome-	
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated	
+GNOME_SHELL_SESSION_MODE=ubuntu	
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh	
+MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=	
+XMODIFIERS=@im=ibus	
+DESKTOP_SESSION=ubuntu	
+GTK_MODULES=gail:atk-bridge	
+DBUS_STARTER_BUS_TYPE=session	
+PWD=/home/tshyana/Desktop/proc_info/task-02	
+LOGNAME=tshyana	
+XDG_SESSION_DESKTOP=ubuntu	
+XDG_SESSION_TYPE=wayland	
+SYSTEMD_EXEC_PID=2935	
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.MXYH32	
+HOME=/home/tshyana	
+USERNAME=tshyana	
+IM_CONFIG_PHASE=1	
+LANG=en_US.UTF-8	
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:	
+XDG_CURRENT_DESKTOP=ubuntu:GNOME	
+MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\x2dsession\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure	
+VTE_VERSION=7600	
+WAYLAND_DISPLAY=wayland-0	
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/f21fcef1_fa62_4972_8d1a_29830abb35be	
+GNOME_SETUP_DISPLAY=:1	
+LESSCLOSE=/usr/bin/lesspipe %s %s	
+XDG_SESSION_CLASS=user	
+TERM=xterm-256color	
+LESSOPEN=| /usr/bin/lesspipe %s	
+USER=tshyana	
+GNOME_TERMINAL_SERVICE=:1.148	
+DISPLAY=:0	
+SHLVL=1	
+GSM_SKIP_SSH_AGENT_WORKAROUND=true	
+QT_IM_MODULE=ibus	
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=67b558392aef67176443305967d59562	
+XDG_RUNTIME_DIR=/run/user/1000	
+DEBUGINFOD_URLS=https://debuginfod.ubuntu.com 	
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop	
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin	
+GDMSESSION=ubuntu	
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=67b558392aef67176443305967d59562	
+OLDPWD=/home/tshyana/Desktop/proc_info	
+_=./prodcons_client	
+
+FD:
+0 -> /dev/pts/2
+1 -> /dev/pts/2
+2 -> /dev/pts/2
+4 -> socket:[84998]
+5 -> socket:[66552]
+6 -> socket:[83034]
+7 -> socket:[81643]
+8 -> socket:[75089]
+9 -> socket:[81645]
+10 -> socket:[76156]
+
+IO:
+rchar: 23947
+wchar: 114
+syscr: 37
+syscw: 4
+read_bytes: 0
+write_bytes: 0
+cancelled_write_bytes: 0
+
+
+MAPS:
+
+630d2a63d000-630d2a63e000 r--p 00000000 08:02 5116929                    /home/tshyana/Desktop/proc_info/task-02/prodcons_client
+
+Fetching PAGEMAP info for PID 58800, region: 0x630d2a63d000-0x630d2a63e000
+Big endian? 0
+Vaddr: 0x630d2a63d000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x31869531e8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa180000000000000
+PFN: 0x0
+
+630d2a63e000-630d2a63f000 r-xp 00001000 08:02 5116929                    /home/tshyana/Desktop/proc_info/task-02/prodcons_client
+
+Fetching PAGEMAP info for PID 58800, region: 0x630d2a63e000-0x630d2a63f000
+Big endian? 0
+Vaddr: 0x630d2a63e000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x31869531f0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa180000000000000
+PFN: 0x0
+
+630d2a63f000-630d2a640000 r--p 00002000 08:02 5116929                    /home/tshyana/Desktop/proc_info/task-02/prodcons_client
+
+Fetching PAGEMAP info for PID 58800, region: 0x630d2a63f000-0x630d2a640000
+Big endian? 0
+Vaddr: 0x630d2a63f000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x31869531f8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa180000000000000
+PFN: 0x0
+
+630d2a640000-630d2a641000 r--p 00002000 08:02 5116929                    /home/tshyana/Desktop/proc_info/task-02/prodcons_client
+
+Fetching PAGEMAP info for PID 58800, region: 0x630d2a640000-0x630d2a641000
+Big endian? 0
+Vaddr: 0x630d2a640000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x3186953200
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+630d2a641000-630d2a642000 rw-p 00003000 08:02 5116929                    /home/tshyana/Desktop/proc_info/task-02/prodcons_client
+
+Fetching PAGEMAP info for PID 58800, region: 0x630d2a641000-0x630d2a642000
+Big endian? 0
+Vaddr: 0x630d2a641000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x3186953208
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+630d612fb000-630d6131c000 rw-p 00000000 00:00 0                          [heap]
+
+Fetching PAGEMAP info for PID 58800, region: 0x630d612fb000-0x630d6131c000
+Big endian? 0
+Vaddr: 0x630d612fb000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x3186b097d8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bcc000000-701bcc021000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bcc000000-0x701bcc021000
+Big endian? 0
+Vaddr: 0x701bcc000000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380de60000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bcc021000-701bd0000000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bcc021000-0x701bd0000000
+Big endian? 0
+Vaddr: 0x701bcc021000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380de60108
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bd0000000-701bd0021000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bd0000000-0x701bd0021000
+Big endian? 0
+Vaddr: 0x701bd0000000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380de80000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bd0021000-701bd4000000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bd0021000-0x701bd4000000
+Big endian? 0
+Vaddr: 0x701bd0021000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380de80108
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bd8000000-701bd8021000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bd8000000-0x701bd8021000
+Big endian? 0
+Vaddr: 0x701bd8000000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dec0000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bd8021000-701bdc000000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bd8021000-0x701bdc000000
+Big endian? 0
+Vaddr: 0x701bd8021000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dec0108
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bdc000000-701bdc021000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bdc000000-0x701bdc021000
+Big endian? 0
+Vaddr: 0x701bdc000000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dee0000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bdc021000-701be0000000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bdc021000-0x701be0000000
+Big endian? 0
+Vaddr: 0x701bdc021000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dee0108
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701be4000000-701be4021000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701be4000000-0x701be4021000
+Big endian? 0
+Vaddr: 0x701be4000000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df20000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701be4021000-701be8000000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701be4021000-0x701be8000000
+Big endian? 0
+Vaddr: 0x701be4021000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df20108
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701be8000000-701be8021000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701be8000000-0x701be8021000
+Big endian? 0
+Vaddr: 0x701be8000000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df40000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701be8021000-701bec000000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701be8021000-0x701bec000000
+Big endian? 0
+Vaddr: 0x701be8021000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df40108
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bec7f9000-701bec7fa000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bec7f9000-0x701bec7fa000
+Big endian? 0
+Vaddr: 0x701bec7f9000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df63fc8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bec7fa000-701becffa000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bec7fa000-0x701becffa000
+Big endian? 0
+Vaddr: 0x701bec7fa000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df63fd0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701becffa000-701becffb000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701becffa000-0x701becffb000
+Big endian? 0
+Vaddr: 0x701becffa000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df67fd0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701becffb000-701bed7fb000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701becffb000-0x701bed7fb000
+Big endian? 0
+Vaddr: 0x701becffb000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df67fd8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bed7fb000-701bed7fc000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bed7fb000-0x701bed7fc000
+Big endian? 0
+Vaddr: 0x701bed7fb000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df6bfd8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bed7fc000-701bedffc000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bed7fc000-0x701bedffc000
+Big endian? 0
+Vaddr: 0x701bed7fc000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df6bfe0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bedffc000-701bedffd000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bedffc000-0x701bedffd000
+Big endian? 0
+Vaddr: 0x701bedffc000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df6ffe0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bedffd000-701bee7fd000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bedffd000-0x701bee7fd000
+Big endian? 0
+Vaddr: 0x701bedffd000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df6ffe8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bee7fd000-701bee7fe000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bee7fd000-0x701bee7fe000
+Big endian? 0
+Vaddr: 0x701bee7fd000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df73fe8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bee7fe000-701beeffe000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bee7fe000-0x701beeffe000
+Big endian? 0
+Vaddr: 0x701bee7fe000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df73ff0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701beeffe000-701beefff000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701beeffe000-0x701beefff000
+Big endian? 0
+Vaddr: 0x701beeffe000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df77ff0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701beefff000-701bef7ff000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701beefff000-0x701bef7ff000
+Big endian? 0
+Vaddr: 0x701beefff000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df77ff8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bef7ff000-701bef800000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bef7ff000-0x701bef800000
+Big endian? 0
+Vaddr: 0x701bef7ff000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df7bff8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bef800000-701bf0000000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bef800000-0x701bf0000000
+Big endian? 0
+Vaddr: 0x701bef800000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df7c000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf0000000-701bf0021000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf0000000-0x701bf0021000
+Big endian? 0
+Vaddr: 0x701bf0000000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df80000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf0021000-701bf4000000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf0021000-0x701bf4000000
+Big endian? 0
+Vaddr: 0x701bf0021000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380df80108
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf4734000-701bf4735000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf4734000-0x701bf4735000
+Big endian? 0
+Vaddr: 0x701bf4734000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfa39a0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf4735000-701bf4f35000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf4735000-0x701bf4f35000
+Big endian? 0
+Vaddr: 0x701bf4735000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfa39a8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf4f35000-701bf4f36000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf4f35000-0x701bf4f36000
+Big endian? 0
+Vaddr: 0x701bf4f35000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfa79a8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf4f36000-701bf5736000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf4f36000-0x701bf5736000
+Big endian? 0
+Vaddr: 0x701bf4f36000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfa79b0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf5736000-701bf5737000 ---p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf5736000-0x701bf5737000
+Big endian? 0
+Vaddr: 0x701bf5736000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfab9b0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf5737000-701bf5f37000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf5737000-0x701bf5f37000
+Big endian? 0
+Vaddr: 0x701bf5737000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfab9b8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf5f37000-701bf5f57000 r--p 00000000 08:02 4066083                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf5f37000-0x701bf5f57000
+Big endian? 0
+Vaddr: 0x701bf5f37000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfaf9b8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf5f57000-701bf5fb8000 r-xp 00020000 08:02 4066083                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf5f57000-0x701bf5fb8000
+Big endian? 0
+Vaddr: 0x701bf5f57000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfafab8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf5fb8000-701bf5ff1000 r--p 00081000 08:02 4066083                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf5fb8000-0x701bf5ff1000
+Big endian? 0
+Vaddr: 0x701bf5fb8000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfafdc0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf5ff1000-701bf5ffe000 r--p 000ba000 08:02 4066083                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf5ff1000-0x701bf5ffe000
+Big endian? 0
+Vaddr: 0x701bf5ff1000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfaff88
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf5ffe000-701bf6000000 rw-p 000c7000 08:02 4066083                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf5ffe000-0x701bf6000000
+Big endian? 0
+Vaddr: 0x701bf5ffe000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfafff0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6000000-701bf6028000 r--p 00000000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6000000-0x701bf6028000
+Big endian? 0
+Vaddr: 0x701bf6000000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb0000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6028000-701bf61b0000 r-xp 00028000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6028000-0x701bf61b0000
+Big endian? 0
+Vaddr: 0x701bf6028000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb0140
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf61b0000-701bf61ff000 r--p 001b0000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf61b0000-0x701bf61ff000
+Big endian? 0
+Vaddr: 0x701bf61b0000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb0d80
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf61ff000-701bf6203000 r--p 001fe000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf61ff000-0x701bf6203000
+Big endian? 0
+Vaddr: 0x701bf61ff000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb0ff8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6203000-701bf6205000 rw-p 00202000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6203000-0x701bf6205000
+Big endian? 0
+Vaddr: 0x701bf6203000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1018
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6205000-701bf6212000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6205000-0x701bf6212000
+Big endian? 0
+Vaddr: 0x701bf6205000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1028
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6247000-701bf624b000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6247000-0x701bf624b000
+Big endian? 0
+Vaddr: 0x701bf6247000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1238
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf624b000-701bf624e000 r--p 00000000 08:02 4075174                    /usr/lib/x86_64-linux-gnu/libresolv.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf624b000-0x701bf624e000
+Big endian? 0
+Vaddr: 0x701bf624b000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1258
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf624e000-701bf6258000 r-xp 00003000 08:02 4075174                    /usr/lib/x86_64-linux-gnu/libresolv.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf624e000-0x701bf6258000
+Big endian? 0
+Vaddr: 0x701bf624e000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1270
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6258000-701bf625a000 r--p 0000d000 08:02 4075174                    /usr/lib/x86_64-linux-gnu/libresolv.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6258000-0x701bf625a000
+Big endian? 0
+Vaddr: 0x701bf6258000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb12c0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf625a000-701bf625b000 r--p 0000f000 08:02 4075174                    /usr/lib/x86_64-linux-gnu/libresolv.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf625a000-0x701bf625b000
+Big endian? 0
+Vaddr: 0x701bf625a000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb12d0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf625b000-701bf625c000 rw-p 00010000 08:02 4075174                    /usr/lib/x86_64-linux-gnu/libresolv.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf625b000-0x701bf625c000
+Big endian? 0
+Vaddr: 0x701bf625b000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb12d8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf625c000-701bf625e000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf625c000-0x701bf625e000
+Big endian? 0
+Vaddr: 0x701bf625c000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb12e0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf625e000-701bf6260000 r--p 00000000 08:02 4074988                    /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.10
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf625e000-0x701bf6260000
+Big endian? 0
+Vaddr: 0x701bf625e000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb12f0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6260000-701bf6262000 r-xp 00002000 08:02 4074988                    /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.10
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6260000-0x701bf6262000
+Big endian? 0
+Vaddr: 0x701bf6260000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1300
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6262000-701bf6263000 r--p 00004000 08:02 4074988                    /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.10
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6262000-0x701bf6263000
+Big endian? 0
+Vaddr: 0x701bf6262000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1310
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf6263000-701bf6264000 r--p 00004000 08:02 4074988                    /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.10
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6263000-0x701bf6264000
+Big endian? 0
+Vaddr: 0x701bf6263000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1318
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6264000-701bf6265000 rw-p 00005000 08:02 4074988                    /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.10
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6264000-0x701bf6265000
+Big endian? 0
+Vaddr: 0x701bf6264000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1320
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6265000-701bf6268000 r--p 00000000 08:02 4066085                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6265000-0x701bf6268000
+Big endian? 0
+Vaddr: 0x701bf6265000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1328
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6268000-701bf626e000 r-xp 00003000 08:02 4066085                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6268000-0x701bf626e000
+Big endian? 0
+Vaddr: 0x701bf6268000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1340
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf626e000-701bf6270000 r--p 00009000 08:02 4066085                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf626e000-0x701bf6270000
+Big endian? 0
+Vaddr: 0x701bf626e000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1370
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf6270000-701bf6271000 r--p 0000a000 08:02 4066085                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6270000-0x701bf6271000
+Big endian? 0
+Vaddr: 0x701bf6270000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1380
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6271000-701bf6272000 rw-p 0000b000 08:02 4066085                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6271000-0x701bf6272000
+Big endian? 0
+Vaddr: 0x701bf6271000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1388
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6272000-701bf6274000 r--p 00000000 08:02 4074730                    /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6272000-0x701bf6274000
+Big endian? 0
+Vaddr: 0x701bf6272000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1390
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6274000-701bf6275000 r-xp 00002000 08:02 4074730                    /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6274000-0x701bf6275000
+Big endian? 0
+Vaddr: 0x701bf6274000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb13a0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6275000-701bf6276000 r--p 00003000 08:02 4074730                    /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6275000-0x701bf6276000
+Big endian? 0
+Vaddr: 0x701bf6275000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb13a8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf6276000-701bf6277000 r--p 00003000 08:02 4074730                    /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6276000-0x701bf6277000
+Big endian? 0
+Vaddr: 0x701bf6276000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb13b0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6277000-701bf6278000 rw-p 00004000 08:02 4074730                    /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6277000-0x701bf6278000
+Big endian? 0
+Vaddr: 0x701bf6277000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb13b8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6278000-701bf627a000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6278000-0x701bf627a000
+Big endian? 0
+Vaddr: 0x701bf6278000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb13c0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf627a000-701bf627e000 r--p 00000000 08:02 4066088                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf627a000-0x701bf627e000
+Big endian? 0
+Vaddr: 0x701bf627a000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb13d0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf627e000-701bf6299000 r-xp 00004000 08:02 4066088                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf627e000-0x701bf6299000
+Big endian? 0
+Vaddr: 0x701bf627e000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb13f0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6299000-701bf62a4000 r--p 0001f000 08:02 4066088                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6299000-0x701bf62a4000
+Big endian? 0
+Vaddr: 0x701bf6299000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb14c8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf62a4000-701bf62a5000 r--p 0002a000 08:02 4066088                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf62a4000-0x701bf62a5000
+Big endian? 0
+Vaddr: 0x701bf62a4000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1520
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf62a5000-701bf62a6000 rw-p 0002b000 08:02 4066088                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf62a5000-0x701bf62a6000
+Big endian? 0
+Vaddr: 0x701bf62a5000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1528
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf62a6000-701bf62b2000 r--p 00000000 08:02 4066071                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf62a6000-0x701bf62b2000
+Big endian? 0
+Vaddr: 0x701bf62a6000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1530
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf62b2000-701bf62ec000 r-xp 0000c000 08:02 4066071                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf62b2000-0x701bf62ec000
+Big endian? 0
+Vaddr: 0x701bf62b2000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1590
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf62ec000-701bf62f6000 r--p 00046000 08:02 4066071                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf62ec000-0x701bf62f6000
+Big endian? 0
+Vaddr: 0x701bf62ec000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1760
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf62f6000-701bf62f8000 r--p 0004f000 08:02 4066071                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf62f6000-0x701bf62f8000
+Big endian? 0
+Vaddr: 0x701bf62f6000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb17b0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf62f8000-701bf62fa000 rw-p 00051000 08:02 4066071                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf62f8000-0x701bf62fa000
+Big endian? 0
+Vaddr: 0x701bf62f8000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb17c0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf62fa000-701bf6301000 r--p 00000000 08:02 4075254                    /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf62fa000-0x701bf6301000
+Big endian? 0
+Vaddr: 0x701bf62fa000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb17d0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6301000-701bf631d000 r-xp 00007000 08:02 4075254                    /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6301000-0x701bf631d000
+Big endian? 0
+Vaddr: 0x701bf6301000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1808
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf631d000-701bf6325000 r--p 00023000 08:02 4075254                    /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf631d000-0x701bf6325000
+Big endian? 0
+Vaddr: 0x701bf631d000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb18e8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6325000-701bf6326000 r--p 0002a000 08:02 4075254                    /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6325000-0x701bf6326000
+Big endian? 0
+Vaddr: 0x701bf6325000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1928
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6326000-701bf6327000 rw-p 0002b000 08:02 4075254                    /usr/lib/x86_64-linux-gnu/libtirpc.so.3.0.0
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6326000-0x701bf6327000
+Big endian? 0
+Vaddr: 0x701bf6326000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1930
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6335000-701bf6337000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6335000-0x701bf6337000
+Big endian? 0
+Vaddr: 0x701bf6335000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb19a8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6337000-701bf633b000 r--p 00000000 00:00 0                          [vvar]
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6337000-0x701bf633b000
+Big endian? 0
+Vaddr: 0x701bf6337000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb19b8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+701bf633b000-701bf633d000 r-xp 00000000 00:00 0                          [vdso]
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf633b000-0x701bf633d000
+Big endian? 0
+Vaddr: 0x701bf633b000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb19d8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf633d000-701bf633e000 r--p 00000000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf633d000-0x701bf633e000
+Big endian? 0
+Vaddr: 0x701bf633d000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb19e8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf633e000-701bf6369000 r-xp 00001000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf633e000-0x701bf6369000
+Big endian? 0
+Vaddr: 0x701bf633e000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb19f0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6369000-701bf6373000 r--p 0002c000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6369000-0x701bf6373000
+Big endian? 0
+Vaddr: 0x701bf6369000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1b48
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+701bf6373000-701bf6375000 r--p 00036000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6373000-0x701bf6375000
+Big endian? 0
+Vaddr: 0x701bf6373000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1b98
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+701bf6375000-701bf6377000 rw-p 00038000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 58800, region: 0x701bf6375000-0x701bf6377000
+Big endian? 0
+Vaddr: 0x701bf6375000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x380dfb1ba8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+7fff4188a000-7fff418ab000 rw-p 00000000 00:00 0                          [stack]
+
+Fetching PAGEMAP info for PID 58800, region: 0x7fff4188a000-0x7fff418ab000
+Big endian? 0
+Vaddr: 0x7fff4188a000, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x3fffa0c450
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x0 [7]0x0 
+Result: 0x0
+Page not present
+
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+Fetching PAGEMAP info for PID 58800, region: 0xffffffffff600000-0xffffffffff601000
+Big endian? 0
+Vaddr: 0x7fffffffffffffff, Page_size: 4096, Entry_size: 8
+Reading /proc/58800/pagemap at 0x3ffffffffffff8
+
+Reached end of the file
+
+ROOT:/
+
+STAT:
+(1) pid  '58800'
+(2) comm '(prodcons_client)'
+(3) state  'S'
+(4) ppid  '18806'
+(5) pgrp  '58800'
+(6) session  '18806'
+(7) tty_nr  '34818'
+(8) tpgid  '58800'
+(9) flags  '4194304'
+(10) minflt  '268'
+(11) cminflt  '0'
+(12) majflt  '0'
+(13) cmajflt  '0'
+(14) utime  '79'
+(15) stime  '1093'
+(16) cutime  '0'
+(17) cstime  '0'
+(18) priority  '20'
+(19) nice  '0'
+(20) num_threads  '10'
+(21) itrealvalue  '0'
+(22) starttime  '2656620'
+(23) vsize  '566554624'
+(24) rss  '709'
+(25) rsslim  '18446744073709551615'
+(26) startcode  '108908196913152'
+(27) endcode  '108908196915505'
+(28) startstack  '140734292983968'
+(29) kstkesp  '0'
+(30) kstkeip  '0'
+(31) signal  '0'
+(32) blocked  '0'
+(33) sigignore  '0'
+(34) sigcatch  '0'
+(35) wchan  '0'
+(36) nswap  '0'
+(37) cnswap  '0'
+(38) exit_signal  '17'
+(39) processor  '3'
+(40) rt_priority  '0'
+(41) policy  '0'
+(42) delayacct_blkio_ticks  '0'
+(43) guest_time  '0'
+(44) cguest_time  '0'
+(45) start_data  '108908196924696'
+(46) end_data  '108908196925472'
+(47) start_brk  '108909116239872'
+(48) arg_start  '140734292992349'
+(49) arg_end  '140734292992377'
+(50) env_start  '140734292992377'
+(51) env_end  '140734292996070'
+(52) exit_code  '0
+'
+
+STATM: 
+size     138319  (1)
+resident 709  (2)
+shared   645  (3)
+text     1  (4)
+lib      0  (5)
+data     22863  (6)
+dt       0
+8806  (7)
+
+TASK:
+.
+..
+58800
+58804
+58805
+58808
+58958
+58959
+58961
+58965
+58969
+59052
+

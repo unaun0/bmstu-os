@@ -1,0 +1,387 @@
+CMDLINE:./s.out
+CWD:/home/tshyana/Desktop/proc_info/task-03
+COMM:s.out
+
+EXE:/home/tshyana/Desktop/proc_info/task-03/s.out
+ENVIRON:
+SHELL=/bin/bash	
+SESSION_MANAGER=local/Ubuntu:@/tmp/.ICE-unix/2935,unix/Ubuntu:/tmp/.ICE-unix/2935	
+QT_ACCESSIBILITY=1	
+COLORTERM=truecolor	
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg	
+XDG_MENU_PREFIX=gnome-	
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated	
+GNOME_SHELL_SESSION_MODE=ubuntu	
+SSH_AUTH_SOCK=/run/user/1000/keyring/ssh	
+MEMORY_PRESSURE_WRITE=c29tZSAyMDAwMDAgMjAwMDAwMAA=	
+XMODIFIERS=@im=ibus	
+DESKTOP_SESSION=ubuntu	
+GTK_MODULES=gail:atk-bridge	
+DBUS_STARTER_BUS_TYPE=session	
+PWD=/home/tshyana/Desktop/proc_info/task-03	
+LOGNAME=tshyana	
+XDG_SESSION_DESKTOP=ubuntu	
+XDG_SESSION_TYPE=wayland	
+SYSTEMD_EXEC_PID=2935	
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.MXYH32	
+HOME=/home/tshyana	
+USERNAME=tshyana	
+IM_CONFIG_PHASE=1	
+LANG=en_US.UTF-8	
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:	
+XDG_CURRENT_DESKTOP=ubuntu:GNOME	
+MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\x2dsession\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure	
+VTE_VERSION=7600	
+WAYLAND_DISPLAY=wayland-0	
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/5a854abe_fa8f_4879_a87e_067d85bcb0f5	
+GNOME_SETUP_DISPLAY=:1	
+LESSCLOSE=/usr/bin/lesspipe %s %s	
+XDG_SESSION_CLASS=user	
+TERM=xterm-256color	
+LESSOPEN=| /usr/bin/lesspipe %s	
+USER=tshyana	
+GNOME_TERMINAL_SERVICE=:1.148	
+DISPLAY=:0	
+SHLVL=1	
+GSM_SKIP_SSH_AGENT_WORKAROUND=true	
+QT_IM_MODULE=ibus	
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=67b558392aef67176443305967d59562	
+XDG_RUNTIME_DIR=/run/user/1000	
+DEBUGINFOD_URLS=https://debuginfod.ubuntu.com 	
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop	
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin	
+GDMSESSION=ubuntu	
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=67b558392aef67176443305967d59562	
+_=./s.out	
+OLDPWD=/home/tshyana/Desktop/proc_info/task-02	
+
+FD:
+0 -> /dev/pts/1
+1 -> /dev/pts/1
+2 -> /dev/pts/1
+3 -> socket:[75133]
+4 -> /home/tshyana/Desktop/proc_info/task-03/keyf
+
+IO:
+rchar: 225386
+wchar: 2508
+syscr: 1983
+syscw: 142
+read_bytes: 266240
+write_bytes: 0
+cancelled_write_bytes: 0
+
+
+MAPS:
+
+5b837ae84000-5b837ae85000 r--p 00000000 08:02 5116710                    /home/tshyana/Desktop/proc_info/task-03/s.out
+
+Fetching PAGEMAP info for PID 59529, region: 0x5b837ae84000-0x5b837ae85000
+Big endian? 0
+Vaddr: 0x5b837ae84000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x2dc1bd7420
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa180000000000000
+PFN: 0x0
+
+5b837ae85000-5b837ae86000 r-xp 00001000 08:02 5116710                    /home/tshyana/Desktop/proc_info/task-03/s.out
+
+Fetching PAGEMAP info for PID 59529, region: 0x5b837ae85000-0x5b837ae86000
+Big endian? 0
+Vaddr: 0x5b837ae85000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x2dc1bd7428
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa180000000000000
+PFN: 0x0
+
+5b837ae86000-5b837ae87000 r--p 00002000 08:02 5116710                    /home/tshyana/Desktop/proc_info/task-03/s.out
+
+Fetching PAGEMAP info for PID 59529, region: 0x5b837ae86000-0x5b837ae87000
+Big endian? 0
+Vaddr: 0x5b837ae86000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x2dc1bd7430
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa180000000000000
+PFN: 0x0
+
+5b837ae87000-5b837ae88000 r--p 00002000 08:02 5116710                    /home/tshyana/Desktop/proc_info/task-03/s.out
+
+Fetching PAGEMAP info for PID 59529, region: 0x5b837ae87000-0x5b837ae88000
+Big endian? 0
+Vaddr: 0x5b837ae87000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x2dc1bd7438
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+5b837ae88000-5b837ae89000 rw-p 00003000 08:02 5116710                    /home/tshyana/Desktop/proc_info/task-03/s.out
+
+Fetching PAGEMAP info for PID 59529, region: 0x5b837ae88000-0x5b837ae89000
+Big endian? 0
+Vaddr: 0x5b837ae88000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x2dc1bd7440
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+5b8391142000-5b8391163000 rw-p 00000000 00:00 0                          [heap]
+
+Fetching PAGEMAP info for PID 59529, region: 0x5b8391142000-0x5b8391163000
+Big endian? 0
+Vaddr: 0x5b8391142000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x2dc1c88a10
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+7c3b23000000-7c3b23028000 r--p 00000000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b23000000-0x7c3b23028000
+Big endian? 0
+Vaddr: 0x7c3b23000000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d918000
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+7c3b23028000-7c3b231b0000 r-xp 00028000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b23028000-0x7c3b231b0000
+Big endian? 0
+Vaddr: 0x7c3b23028000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d918140
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+7c3b231b0000-7c3b231ff000 r--p 001b0000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b231b0000-0x7c3b231ff000
+Big endian? 0
+Vaddr: 0x7c3b231b0000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d918d80
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+7c3b231ff000-7c3b23203000 r--p 001fe000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b231ff000-0x7c3b23203000
+Big endian? 0
+Vaddr: 0x7c3b231ff000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d918ff8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+7c3b23203000-7c3b23205000 rw-p 00202000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b23203000-0x7c3b23205000
+Big endian? 0
+Vaddr: 0x7c3b23203000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919018
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+7c3b23205000-7c3b23212000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b23205000-0x7c3b23212000
+Big endian? 0
+Vaddr: 0x7c3b23205000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919028
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+7c3b232bc000-7c3b232bf000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b232bc000-0x7c3b232bf000
+Big endian? 0
+Vaddr: 0x7c3b232bc000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d9195e0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+7c3b232cc000-7c3b232cd000 rw-s 00000000 00:01 0                          /SYSV0002065b (deleted)
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b232cc000-0x7c3b232cd000
+Big endian? 0
+Vaddr: 0x7c3b232cc000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919660
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
+Result: 0xa180000000000000
+PFN: 0x0
+
+7c3b232cd000-7c3b232cf000 rw-p 00000000 00:00 0 
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b232cd000-0x7c3b232cf000
+Big endian? 0
+Vaddr: 0x7c3b232cd000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919668
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+7c3b232cf000-7c3b232d3000 r--p 00000000 00:00 0                          [vvar]
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b232cf000-0x7c3b232d3000
+Big endian? 0
+Vaddr: 0x7c3b232cf000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919678
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
+Result: 0x80000000000000
+Page not present
+
+7c3b232d3000-7c3b232d5000 r-xp 00000000 00:00 0                          [vdso]
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b232d3000-0x7c3b232d5000
+Big endian? 0
+Vaddr: 0x7c3b232d3000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919698
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+7c3b232d5000-7c3b232d6000 r--p 00000000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b232d5000-0x7c3b232d6000
+Big endian? 0
+Vaddr: 0x7c3b232d5000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d9196a8
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+7c3b232d6000-7c3b23301000 r-xp 00001000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b232d6000-0x7c3b23301000
+Big endian? 0
+Vaddr: 0x7c3b232d6000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d9196b0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+7c3b23301000-7c3b2330b000 r--p 0002c000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b23301000-0x7c3b2330b000
+Big endian? 0
+Vaddr: 0x7c3b23301000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919808
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
+Result: 0xa080000000000000
+PFN: 0x0
+
+7c3b2330b000-7c3b2330d000 r--p 00036000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b2330b000-0x7c3b2330d000
+Big endian? 0
+Vaddr: 0x7c3b2330b000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919858
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x80 
+Result: 0x8080000000000000
+PFN: 0x0
+
+7c3b2330d000-7c3b2330f000 rw-p 00038000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+
+Fetching PAGEMAP info for PID 59529, region: 0x7c3b2330d000-0x7c3b2330f000
+Big endian? 0
+Vaddr: 0x7c3b2330d000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3e1d919868
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
+Result: 0x8180000000000000
+PFN: 0x0
+
+7fff26754000-7fff26775000 rw-p 00000000 00:00 0                          [stack]
+
+Fetching PAGEMAP info for PID 59529, region: 0x7fff26754000-0x7fff26775000
+Big endian? 0
+Vaddr: 0x7fff26754000, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3fff933aa0
+[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x0 [7]0x0 
+Result: 0x0
+Page not present
+
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
+
+Fetching PAGEMAP info for PID 59529, region: 0xffffffffff600000-0xffffffffff601000
+Big endian? 0
+Vaddr: 0x7fffffffffffffff, Page_size: 4096, Entry_size: 8
+Reading /proc/59529/pagemap at 0x3ffffffffffff8
+
+Reached end of the file
+
+ROOT:/
+
+STAT:
+(1) pid  '59529'
+(2) comm '(s.out)'
+(3) state  'S'
+(4) ppid  '18795'
+(5) pgrp  '59529'
+(6) session  '18795'
+(7) tty_nr  '34817'
+(8) tpgid  '59529'
+(9) flags  '4194304'
+(10) minflt  '732'
+(11) cminflt  '550'
+(12) majflt  '0'
+(13) cmajflt  '4'
+(14) utime  '0'
+(15) stime  '10'
+(16) cutime  '0'
+(17) cstime  '4'
+(18) priority  '20'
+(19) nice  '0'
+(20) num_threads  '1'
+(21) itrealvalue  '0'
+(22) starttime  '2687808'
+(23) vsize  '2748416'
+(24) rss  '409'
+(25) rsslim  '18446744073709551615'
+(26) startcode  '100620260888576'
+(27) endcode  '100620260892565'
+(28) startstack  '140733838728848'
+(29) kstkesp  '0'
+(30) kstkeip  '0'
+(31) signal  '0'
+(32) blocked  '0'
+(33) sigignore  '0'
+(34) sigcatch  '2'
+(35) wchan  '1'
+(36) nswap  '0'
+(37) cnswap  '0'
+(38) exit_signal  '17'
+(39) processor  '3'
+(40) rt_priority  '0'
+(41) policy  '0'
+(42) delayacct_blkio_ticks  '0'
+(43) guest_time  '0'
+(44) cguest_time  '0'
+(45) start_data  '100620260900032'
+(46) end_data  '100620260900964'
+(47) start_brk  '100620632858624'
+(48) arg_start  '140733838737789'
+(49) arg_end  '140733838737797'
+(50) env_start  '140733838737797'
+(51) env_end  '140733838741488'
+(52) exit_code  '0
+'
+
+STATM: 
+size     671  (1)
+resident 409  (2)
+shared   409  (3)
+text     1  (4)
+lib      0  (5)
+data     89  (6)
+dt       0
+  (7)
+
+TASK:
+.
+..
+59529
+
