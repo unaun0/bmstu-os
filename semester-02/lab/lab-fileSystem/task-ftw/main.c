@@ -17,32 +17,33 @@ node_t *stk = NULL;
 
 typedef int fn(const char *, int, int);
 
-int doPath(fn *func, char *shortName, int depth) {
+int doPath(fn *func, char *pathName, int depth) {
     if (depth < 0){ 
-        chdir(shortName);
-        return 0;
+        chdir(pathName);
+        return EXIT_SUCCESS;
     }
     struct stat statBuf;
     struct dirent *dirp;
     DIR *dp;
-    if (lstat(shortName, &statBuf) == -1) {
-        exit(EXIT_FAILURE);
+    if (lstat(pathName, &statBuf) == -1) {
+        perror("lstat perror: failed to get file stat\n");
+        return EXIT_FAILURE;
     }
     if (!S_ISDIR(statBuf.st_mode)) {
         incStat(&statBuf, &stats);
-        func(shortName, FTW_FILE, depth);
+        func(pathName, FTW_FILE, depth);
         return EXIT_SUCCESS;
     }
-    func(shortName, FTW_DIR, depth);
+    func(pathName, FTW_DIR, depth);
     stats.ndir++;
-    if ((dp = opendir(shortName)) == NULL) {
-        perror("opendir error: directory does not exist or access is not available");
-        exit(EXIT_FAILURE);
+    if ((dp = opendir(pathName)) == NULL) {
+        perror("opendir error: directory does not exist or access is not available\n");
+        return EXIT_FAILURE;
     }
-    if (chdir(shortName) == -1) {
+    if (chdir(pathName) == -1) {
         closedir(dp);
-        perror("chdir error: failed to go to directory");
-        exit(EXIT_FAILURE);
+        perror("chdir error: failed to go to directory\n");
+        return EXIT_FAILURE;
     }
     depth++;
     node_t *elem = create_node("..", -1);
@@ -57,20 +58,19 @@ int doPath(fn *func, char *shortName, int depth) {
         perror("error readdir");
     }
     if (closedir(dp) == -1) {
-        exit(EXIT_FAILURE);
+        return EXIT_FAILURE;
     }
-
     return EXIT_SUCCESS;
 }
 
-static int ftw(char *pathName, fn *func) {
-    if (chdir(pathName) == -1) {
-        printf("\error: directory does not exist or access is not available\n");
+static int ftw(char *shortName, fn *func) {
+    if (chdir(shortName) == -1) {
+        printf("error: directory does not exist or access is not available\n");
         exit(EXIT_FAILURE);
     }
     char cwd[PATH_MAX];
     if (getcwd(cwd, sizeof(cwd)) == NULL) {
-        printf("\nerror: can't get full path to work dir\n");
+        printf("error: can't get full path to work dir\n");
         exit(EXIT_FAILURE);
     }
     node_t *elem = create_node(cwd, 0);
@@ -84,22 +84,19 @@ static int ftw(char *pathName, fn *func) {
 }
 
 static int function(const char *pathName, int type, int depth) {
-    for (int i = 0; i < depth; i++) {
+    for (int i = 0; i < depth; i++)
         printf(MAGENTA "----| " RESET);
-    }
-    if (type == FTW_DIR) {
+    if (type == FTW_DIR)
         printf(GREEN" %s\n" RESET,  pathName);
-    }
-    else if (type == FTW_FILE) {
+    else if (type == FTW_FILE)
         printf(CYAN " %s\n" RESET,  pathName);
-    }
     return EXIT_SUCCESS;
 }
 
 int main(int argc, char *argv[])
 {
     if (argc != 2) {
-        perror("error: directory is not set");
+        perror("error: directory is not set\n");
         exit(EXIT_FAILURE);
     }
     ftw(argv[1], function);

@@ -22,12 +22,12 @@ void printStat(stat_t *stats) {
          \n directory (d):                  %5ld (%4.2f %%) \
          \n block device (b):               %5ld (%4.2f %%) \
          \n character device (c):           %5ld (%4.2f %%) \
-         \n named pipe (p):                 %5ld (%4.2f %%) \
+         \n named pipe (fifo) (p):          %5ld (%4.2f %%) \
          \n symbolic link (l):              %5ld (%4.2f %%) \
          \n socket (s):                     %5ld (%4.2f %%) \
-         \n ------------------------------------------------- \
-         \n Total:                          %5ld\n\n \
-         \n -------------------------------------------------" RESET, 
+         \n ------------------------------------------------ \
+         \n Total:                          %5ld \
+         \n ------------------------------------------------\n\n" RESET, 
          stats->nreg, findPercent(stats->nreg, stats->ntotal),
          stats->ndir, findPercent(stats->ndir, stats->ntotal),
          stats->nblk, findPercent(stats->nblk, stats->ntotal),
@@ -40,7 +40,7 @@ void printStat(stat_t *stats) {
 }
 
 void incStat(struct stat *mode, stat_t *stats) {
-    switch (mode->st_mode & S_IFMT) {  // В macOS используется S_IFMT
+    switch (mode->st_mode & S_IFMT) {
         case S_IFREG:
             stats->nreg++;
             break;

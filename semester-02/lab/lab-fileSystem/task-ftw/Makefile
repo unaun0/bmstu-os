@@ -6,7 +6,7 @@ VPATH = lib/
 SRC := $(wildcard lib/*.c)
 OBJ := $(patsubst lib/%.c,lib/%.o,$(SRC))
 
-app.exe: main.o $(OBJ)
+app.out: main.o $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 lib/%.o: lib/%.c
@@ -16,10 +16,10 @@ main.o: main.c
 	$(CC) -c -I $(HEADERS_DIR) $< -o $@ $(CFLAGS)
 
 clean:
-	rm -f *.o lib/*.o app.exe
+	rm -f *.o lib/*.o app.out
 
-run: app.exe
-	./app.exe ~/studying/sem6/
+run: app.out
+	./app.out ~/studying/sem6/
 
-test: app.exe
-	./app.exe ~/studying/
+test: app.out
+	./app.out ~/studying/
