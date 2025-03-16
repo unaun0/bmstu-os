@@ -1,3 +1,6 @@
+Script started on 2025-03-16 15:39:11+00:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="134" LINES="39"]
+[?2004h]0;tshyana@Ubuntu: ~/Desktop/proc_info[01;32mtshyana@Ubuntu[00m:[01;34m~/Desktop/proc_info[00m$ cd task-03ls[Kcd .././prodcons_server [5Pcd ../task-02[2P./app 10 20[7Pmakecd task-01[6Pexit./proc_info 4750[K[K[K[K5810
+[?2004l
 CMDLINE:./c.out
 CWD:/home/tshyana/Desktop/proc_info/task-03
 COMM:c.out
@@ -5,7 +8,7 @@ COMM:c.out
 EXE:/home/tshyana/Desktop/proc_info/task-03/c.out
 ENVIRON:
 SHELL=/bin/bash	
-SESSION_MANAGER=local/Ubuntu:@/tmp/.ICE-unix/2935,unix/Ubuntu:/tmp/.ICE-unix/2935	
+SESSION_MANAGER=local/Ubuntu:@/tmp/.ICE-unix/2240,unix/Ubuntu:/tmp/.ICE-unix/2240	
 QT_ACCESSIBILITY=1	
 COLORTERM=truecolor	
 XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg	
@@ -22,8 +25,8 @@ PWD=/home/tshyana/Desktop/proc_info/task-03
 LOGNAME=tshyana	
 XDG_SESSION_DESKTOP=ubuntu	
 XDG_SESSION_TYPE=wayland	
-SYSTEMD_EXEC_PID=2935	
-XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.MXYH32	
+SYSTEMD_EXEC_PID=2240	
+XAUTHORITY=/run/user/1000/.mutter-Xwaylandauth.Q5E922	
 HOME=/home/tshyana	
 USERNAME=tshyana	
 IM_CONFIG_PHASE=1	
@@ -33,25 +36,25 @@ XDG_CURRENT_DESKTOP=ubuntu:GNOME
 MEMORY_PRESSURE_WATCH=/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\x2dsession\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure	
 VTE_VERSION=7600	
 WAYLAND_DISPLAY=wayland-0	
-GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/f21fcef1_fa62_4972_8d1a_29830abb35be	
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/41346676_654b_4230_918e_6be5ccd4a52c	
 GNOME_SETUP_DISPLAY=:1	
 LESSCLOSE=/usr/bin/lesspipe %s %s	
 XDG_SESSION_CLASS=user	
 TERM=xterm-256color	
 LESSOPEN=| /usr/bin/lesspipe %s	
 USER=tshyana	
-GNOME_TERMINAL_SERVICE=:1.148	
+GNOME_TERMINAL_SERVICE=:1.123	
 DISPLAY=:0	
 SHLVL=1	
 GSM_SKIP_SSH_AGENT_WORKAROUND=true	
 QT_IM_MODULE=ibus	
-DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=67b558392aef67176443305967d59562	
+DBUS_STARTER_ADDRESS=unix:path=/run/user/1000/bus,guid=e24d5b5277e8142f29a1896267d6e772	
 XDG_RUNTIME_DIR=/run/user/1000	
 DEBUGINFOD_URLS=https://debuginfod.ubuntu.com 	
 XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop	
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin	
 GDMSESSION=ubuntu	
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=67b558392aef67176443305967d59562	
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus,guid=e24d5b5277e8142f29a1896267d6e772	
 OLDPWD=/home/tshyana/Desktop/proc_info/task-02	
 _=./c.out	
 
@@ -62,248 +65,726 @@ FD:
 
 IO:
 rchar: 4092
-wchar: 0
+wchar: 5
 syscr: 9
-syscw: 0
+syscw: 1
 read_bytes: 0
 write_bytes: 0
 cancelled_write_bytes: 0
 
 
 MAPS:
-
-5a2550aa1000-5a2550aa2000 r--p 00000000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
-
-Fetching PAGEMAP info for PID 59539, region: 0x5a2550aa1000-0x5a2550aa2000
-Big endian? 0
-Vaddr: 0x5a2550aa1000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x2d12a85508
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa1 
-Result: 0xa180000000000000
-PFN: 0x0
-
-5a2550aa2000-5a2550aa3000 r-xp 00001000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
-
-Fetching PAGEMAP info for PID 59539, region: 0x5a2550aa2000-0x5a2550aa3000
-Big endian? 0
-Vaddr: 0x5a2550aa2000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x2d12a85510
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
-Result: 0xa080000000000000
-PFN: 0x0
-
-5a2550aa3000-5a2550aa4000 r--p 00002000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
-
-Fetching PAGEMAP info for PID 59539, region: 0x5a2550aa3000-0x5a2550aa4000
-Big endian? 0
-Vaddr: 0x5a2550aa3000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x2d12a85518
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
-Result: 0x80000000000000
-Page not present
-
-5a2550aa4000-5a2550aa5000 r--p 00002000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
-
-Fetching PAGEMAP info for PID 59539, region: 0x5a2550aa4000-0x5a2550aa5000
-Big endian? 0
-Vaddr: 0x5a2550aa4000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x2d12a85520
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x80 
-Result: 0x8080000000000000
-PFN: 0x0
-
-5a2550aa5000-5a2550aa6000 rw-p 00003000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
-
-Fetching PAGEMAP info for PID 59539, region: 0x5a2550aa5000-0x5a2550aa6000
-Big endian? 0
-Vaddr: 0x5a2550aa5000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x2d12a85528
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
-Result: 0x8180000000000000
-PFN: 0x0
-
-74d16fc00000-74d16fc28000 r--p 00000000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fc00000-0x74d16fc28000
-Big endian? 0
-Vaddr: 0x74d16fc00000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7e000
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
-Result: 0xa080000000000000
-PFN: 0x0
-
-74d16fc28000-74d16fdb0000 r-xp 00028000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fc28000-0x74d16fdb0000
-Big endian? 0
-Vaddr: 0x74d16fc28000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7e140
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
-Result: 0xa080000000000000
-PFN: 0x0
-
-74d16fdb0000-74d16fdff000 r--p 001b0000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fdb0000-0x74d16fdff000
-Big endian? 0
-Vaddr: 0x74d16fdb0000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7ed80
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
-Result: 0x80000000000000
-Page not present
-
-74d16fdff000-74d16fe03000 r--p 001fe000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fdff000-0x74d16fe03000
-Big endian? 0
-Vaddr: 0x74d16fdff000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7eff8
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x80 
-Result: 0x8080000000000000
-PFN: 0x0
-
-74d16fe03000-74d16fe05000 rw-p 00202000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe03000-0x74d16fe05000
-Big endian? 0
-Vaddr: 0x74d16fe03000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f018
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
-Result: 0x8180000000000000
-PFN: 0x0
-
-74d16fe05000-74d16fe12000 rw-p 00000000 00:00 0 
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe05000-0x74d16fe12000
-Big endian? 0
-Vaddr: 0x74d16fe05000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f028
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
-Result: 0x8180000000000000
-PFN: 0x0
-
-74d16fe1d000-74d16fe20000 rw-p 00000000 00:00 0 
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe1d000-0x74d16fe20000
-Big endian? 0
-Vaddr: 0x74d16fe1d000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f0e8
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
-Result: 0x8180000000000000
-PFN: 0x0
-
-74d16fe2e000-74d16fe30000 rw-p 00000000 00:00 0 
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe2e000-0x74d16fe30000
-Big endian? 0
-Vaddr: 0x74d16fe2e000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f170
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x80 
-Result: 0x8080000000000000
-PFN: 0x0
-
-74d16fe30000-74d16fe34000 r--p 00000000 00:00 0                          [vvar]
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe30000-0x74d16fe34000
-Big endian? 0
-Vaddr: 0x74d16fe30000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f180
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x0 
-Result: 0x80000000000000
-Page not present
-
-74d16fe34000-74d16fe36000 r-xp 00000000 00:00 0                          [vdso]
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe34000-0x74d16fe36000
-Big endian? 0
-Vaddr: 0x74d16fe34000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f1a0
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
-Result: 0xa080000000000000
-PFN: 0x0
-
-74d16fe36000-74d16fe37000 r--p 00000000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe36000-0x74d16fe37000
-Big endian? 0
-Vaddr: 0x74d16fe36000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f1b0
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
-Result: 0xa080000000000000
-PFN: 0x0
-
-74d16fe37000-74d16fe62000 r-xp 00001000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe37000-0x74d16fe62000
-Big endian? 0
-Vaddr: 0x74d16fe37000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f1b8
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
-Result: 0xa080000000000000
-PFN: 0x0
-
-74d16fe62000-74d16fe6c000 r--p 0002c000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe62000-0x74d16fe6c000
-Big endian? 0
-Vaddr: 0x74d16fe62000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f310
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0xa0 
-Result: 0xa080000000000000
-PFN: 0x0
-
-74d16fe6c000-74d16fe6e000 r--p 00036000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe6c000-0x74d16fe6e000
-Big endian? 0
-Vaddr: 0x74d16fe6c000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f360
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x80 
-Result: 0x8080000000000000
-PFN: 0x0
-
-74d16fe6e000-74d16fe70000 rw-p 00038000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
-
-Fetching PAGEMAP info for PID 59539, region: 0x74d16fe6e000-0x74d16fe70000
-Big endian? 0
-Vaddr: 0x74d16fe6e000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3a68b7f370
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x80 [7]0x81 
-Result: 0x8180000000000000
-PFN: 0x0
-
-7ffd1dede000-7ffd1deff000 rw-p 00000000 00:00 0                          [stack]
-
-Fetching PAGEMAP info for PID 59539, region: 0x7ffd1dede000-0x7ffd1deff000
-Big endian? 0
-Vaddr: 0x7ffd1dede000, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3ffe8ef6f0
-[0]0x0 [1]0x0 [2]0x0 [3]0x0 [4]0x0 [5]0x0 [6]0x0 [7]0x0 
-Result: 0x0
-Page not present
-
+5a38bd919000-5a38bd91a000 r--p 00000000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
+5a38bd91a000-5a38bd91b000 r-xp 00001000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
+5a38bd91b000-5a38bd91c000 r--p 00002000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
+5a38bd91c000-5a38bd91d000 r--p 00002000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
+5a38bd91d000-5a38bd91e000 rw-p 00003000 08:02 5113383                    /home/tshyana/Desktop/proc_info/task-03/c.out
+5a38f7cbc000-5a38f7cdd000 rw-p 00000000 00:00 0                          [heap]
+7f1d6d000000-7f1d6d028000 r--p 00000000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f1d6d028000-7f1d6d1b0000 r-xp 00028000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f1d6d1b0000-7f1d6d1ff000 r--p 001b0000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f1d6d1ff000-7f1d6d203000 r--p 001fe000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f1d6d203000-7f1d6d205000 rw-p 00202000 08:02 4074704                    /usr/lib/x86_64-linux-gnu/libc.so.6
+7f1d6d205000-7f1d6d212000 rw-p 00000000 00:00 0 
+7f1d6d23c000-7f1d6d23f000 rw-p 00000000 00:00 0 
+7f1d6d24d000-7f1d6d24f000 rw-p 00000000 00:00 0 
+7f1d6d24f000-7f1d6d253000 r--p 00000000 00:00 0                          [vvar]
+7f1d6d253000-7f1d6d255000 r-xp 00000000 00:00 0                          [vdso]
+7f1d6d255000-7f1d6d256000 r--p 00000000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f1d6d256000-7f1d6d281000 r-xp 00001000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f1d6d281000-7f1d6d28b000 r--p 0002c000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f1d6d28b000-7f1d6d28d000 r--p 00036000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7f1d6d28d000-7f1d6d28f000 rw-p 00038000 08:02 4074524                    /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7fffac547000-7fffac568000 rw-p 00000000 00:00 0                          [stack]
 ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
 
-Fetching PAGEMAP info for PID 59539, region: 0xffffffffff600000-0xffffffffff601000
-Big endian? 0
-Vaddr: 0x7fffffffffffffff, Page_size: 4096, Entry_size: 8
-Reading /proc/59539/pagemap at 0x3ffffffffffff8
-
-Reached end of the file
+PAGEMAP
+ addr : pfn soft-dirty file/shared swapped present
+0x5a38bd919000     : 0                1          1          0          1         
+0x5a38bd91a000     : 0                1          1          0          1         
+0x5a38bd91b000     : 0                1          1          0          1         
+0x5a38bd91c000     : 0                1          0          0          1         
+0x5a38bd91d000     : 0                1          0          0          1         
+0x5a38f7cbc000     : 0                1          0          0          1         
+0x5a38f7cbd000     : 0                1          0          0          0         
+0x5a38f7cbe000     : 0                1          0          0          0         
+0x5a38f7cbf000     : 0                1          0          0          0         
+0x5a38f7cc0000     : 0                1          0          0          0         
+0x5a38f7cc1000     : 0                1          0          0          0         
+0x5a38f7cc2000     : 0                1          0          0          0         
+0x5a38f7cc3000     : 0                1          0          0          0         
+0x5a38f7cc4000     : 0                1          0          0          0         
+0x5a38f7cc5000     : 0                1          0          0          0         
+0x5a38f7cc6000     : 0                1          0          0          0         
+0x5a38f7cc7000     : 0                1          0          0          0         
+0x5a38f7cc8000     : 0                1          0          0          0         
+0x5a38f7cc9000     : 0                1          0          0          0         
+0x5a38f7cca000     : 0                1          0          0          0         
+0x5a38f7ccb000     : 0                1          0          0          0         
+0x5a38f7ccc000     : 0                1          0          0          0         
+0x5a38f7ccd000     : 0                1          0          0          0         
+0x5a38f7cce000     : 0                1          0          0          0         
+0x5a38f7ccf000     : 0                1          0          0          0         
+0x5a38f7cd0000     : 0                1          0          0          0         
+0x5a38f7cd1000     : 0                1          0          0          0         
+0x5a38f7cd2000     : 0                1          0          0          0         
+0x5a38f7cd3000     : 0                1          0          0          0         
+0x5a38f7cd4000     : 0                1          0          0          0         
+0x5a38f7cd5000     : 0                1          0          0          0         
+0x5a38f7cd6000     : 0                1          0          0          0         
+0x5a38f7cd7000     : 0                1          0          0          0         
+0x5a38f7cd8000     : 0                1          0          0          0         
+0x5a38f7cd9000     : 0                1          0          0          0         
+0x5a38f7cda000     : 0                1          0          0          0         
+0x5a38f7cdb000     : 0                1          0          0          0         
+0x5a38f7cdc000     : 0                1          0          0          0         
+0x7f1d6d000000     : 0                1          1          0          1         
+0x7f1d6d001000     : 0                1          0          0          0         
+0x7f1d6d002000     : 0                1          1          0          1         
+0x7f1d6d003000     : 0                1          1          0          1         
+0x7f1d6d004000     : 0                1          1          0          1         
+0x7f1d6d005000     : 0                1          1          0          1         
+0x7f1d6d006000     : 0                1          1          0          1         
+0x7f1d6d007000     : 0                1          1          0          1         
+0x7f1d6d008000     : 0                1          1          0          1         
+0x7f1d6d009000     : 0                1          1          0          1         
+0x7f1d6d00a000     : 0                1          1          0          1         
+0x7f1d6d00b000     : 0                1          1          0          1         
+0x7f1d6d00c000     : 0                1          1          0          1         
+0x7f1d6d00d000     : 0                1          1          0          1         
+0x7f1d6d00e000     : 0                1          1          0          1         
+0x7f1d6d00f000     : 0                1          1          0          1         
+0x7f1d6d010000     : 0                1          1          0          1         
+0x7f1d6d011000     : 0                1          1          0          1         
+0x7f1d6d012000     : 0                1          1          0          1         
+0x7f1d6d013000     : 0                1          1          0          1         
+0x7f1d6d014000     : 0                1          1          0          1         
+0x7f1d6d015000     : 0                1          1          0          1         
+0x7f1d6d016000     : 0                1          1          0          1         
+0x7f1d6d017000     : 0                1          1          0          1         
+0x7f1d6d018000     : 0                1          1          0          1         
+0x7f1d6d019000     : 0                1          1          0          1         
+0x7f1d6d01a000     : 0                1          1          0          1         
+0x7f1d6d01b000     : 0                1          1          0          1         
+0x7f1d6d01c000     : 0                1          1          0          1         
+0x7f1d6d01d000     : 0                1          1          0          1         
+0x7f1d6d01e000     : 0                1          1          0          1         
+0x7f1d6d01f000     : 0                1          1          0          1         
+0x7f1d6d020000     : 0                1          1          0          1         
+0x7f1d6d021000     : 0                1          1          0          1         
+0x7f1d6d022000     : 0                1          1          0          1         
+0x7f1d6d023000     : 0                1          1          0          1         
+0x7f1d6d024000     : 0                1          1          0          1         
+0x7f1d6d025000     : 0                1          1          0          1         
+0x7f1d6d026000     : 0                1          1          0          1         
+0x7f1d6d027000     : 0                1          1          0          1         
+0x7f1d6d028000     : 0                1          1          0          1         
+0x7f1d6d029000     : 0                1          1          0          1         
+0x7f1d6d02a000     : 0                1          1          0          1         
+0x7f1d6d02b000     : 0                1          1          0          1         
+0x7f1d6d02c000     : 0                1          1          0          1         
+0x7f1d6d02d000     : 0                1          1          0          1         
+0x7f1d6d02e000     : 0                1          1          0          1         
+0x7f1d6d02f000     : 0                1          1          0          1         
+0x7f1d6d030000     : 0                1          1          0          1         
+0x7f1d6d031000     : 0                1          1          0          1         
+0x7f1d6d032000     : 0                1          1          0          1         
+0x7f1d6d033000     : 0                1          1          0          1         
+0x7f1d6d034000     : 0                1          1          0          1         
+0x7f1d6d035000     : 0                1          1          0          1         
+0x7f1d6d036000     : 0                1          1          0          1         
+0x7f1d6d037000     : 0                1          1          0          1         
+0x7f1d6d038000     : 0                1          1          0          1         
+0x7f1d6d039000     : 0                1          1          0          1         
+0x7f1d6d03a000     : 0                1          1          0          1         
+0x7f1d6d03b000     : 0                1          1          0          1         
+0x7f1d6d03c000     : 0                1          1          0          1         
+0x7f1d6d03d000     : 0                1          1          0          1         
+0x7f1d6d03e000     : 0                1          1          0          1         
+0x7f1d6d03f000     : 0                1          1          0          1         
+0x7f1d6d040000     : 0                1          1          0          1         
+0x7f1d6d041000     : 0                1          1          0          1         
+0x7f1d6d042000     : 0                1          1          0          1         
+0x7f1d6d043000     : 0                1          1          0          1         
+0x7f1d6d044000     : 0                1          1          0          1         
+0x7f1d6d045000     : 0                1          1          0          1         
+0x7f1d6d046000     : 0                1          1          0          1         
+0x7f1d6d047000     : 0                1          1          0          1         
+0x7f1d6d048000     : 0                1          1          0          1         
+0x7f1d6d049000     : 0                1          1          0          1         
+0x7f1d6d04a000     : 0                1          1          0          1         
+0x7f1d6d04b000     : 0                1          1          0          1         
+0x7f1d6d04c000     : 0                1          1          0          1         
+0x7f1d6d04d000     : 0                1          1          0          1         
+0x7f1d6d04e000     : 0                1          1          0          1         
+0x7f1d6d04f000     : 0                1          1          0          1         
+0x7f1d6d050000     : 0                1          1          0          1         
+0x7f1d6d051000     : 0                1          1          0          1         
+0x7f1d6d052000     : 0                1          1          0          1         
+0x7f1d6d053000     : 0                1          1          0          1         
+0x7f1d6d054000     : 0                1          1          0          1         
+0x7f1d6d055000     : 0                1          1          0          1         
+0x7f1d6d056000     : 0                1          1          0          1         
+0x7f1d6d057000     : 0                1          1          0          1         
+0x7f1d6d058000     : 0                1          1          0          1         
+0x7f1d6d059000     : 0                1          1          0          1         
+0x7f1d6d05a000     : 0                1          1          0          1         
+0x7f1d6d05b000     : 0                1          1          0          1         
+0x7f1d6d05c000     : 0                1          1          0          1         
+0x7f1d6d05d000     : 0                1          1          0          1         
+0x7f1d6d05e000     : 0                1          1          0          1         
+0x7f1d6d05f000     : 0                1          1          0          1         
+0x7f1d6d060000     : 0                1          1          0          1         
+0x7f1d6d061000     : 0                1          1          0          1         
+0x7f1d6d062000     : 0                1          1          0          1         
+0x7f1d6d063000     : 0                1          1          0          1         
+0x7f1d6d064000     : 0                1          1          0          1         
+0x7f1d6d065000     : 0                1          1          0          1         
+0x7f1d6d066000     : 0                1          1          0          1         
+0x7f1d6d067000     : 0                1          1          0          1         
+0x7f1d6d068000     : 0                1          1          0          1         
+0x7f1d6d069000     : 0                1          1          0          1         
+0x7f1d6d06a000     : 0                1          1          0          1         
+0x7f1d6d06b000     : 0                1          1          0          1         
+0x7f1d6d06c000     : 0                1          1          0          1         
+0x7f1d6d06d000     : 0                1          1          0          1         
+0x7f1d6d06e000     : 0                1          1          0          1         
+0x7f1d6d06f000     : 0                1          1          0          1         
+0x7f1d6d070000     : 0                1          0          0          0         
+0x7f1d6d071000     : 0                1          0          0          0         
+0x7f1d6d072000     : 0                1          0          0          0         
+0x7f1d6d073000     : 0                1          0          0          0         
+0x7f1d6d074000     : 0                1          0          0          0         
+0x7f1d6d075000     : 0                1          0          0          0         
+0x7f1d6d076000     : 0                1          0          0          0         
+0x7f1d6d077000     : 0                1          0          0          0         
+0x7f1d6d078000     : 0                1          0          0          0         
+0x7f1d6d079000     : 0                1          0          0          0         
+0x7f1d6d07a000     : 0                1          0          0          0         
+0x7f1d6d07b000     : 0                1          0          0          0         
+0x7f1d6d07c000     : 0                1          0          0          0         
+0x7f1d6d07d000     : 0                1          0          0          0         
+0x7f1d6d07e000     : 0                1          0          0          0         
+0x7f1d6d07f000     : 0                1          0          0          0         
+0x7f1d6d080000     : 0                1          1          0          1         
+0x7f1d6d081000     : 0                1          1          0          1         
+0x7f1d6d082000     : 0                1          1          0          1         
+0x7f1d6d083000     : 0                1          1          0          1         
+0x7f1d6d084000     : 0                1          1          0          1         
+0x7f1d6d085000     : 0                1          1          0          1         
+0x7f1d6d086000     : 0                1          1          0          1         
+0x7f1d6d087000     : 0                1          1          0          1         
+0x7f1d6d088000     : 0                1          1          0          1         
+0x7f1d6d089000     : 0                1          1          0          1         
+0x7f1d6d08a000     : 0                1          1          0          1         
+0x7f1d6d08b000     : 0                1          1          0          1         
+0x7f1d6d08c000     : 0                1          1          0          1         
+0x7f1d6d08d000     : 0                1          0          0          0         
+0x7f1d6d08e000     : 0                1          1          0          1         
+0x7f1d6d08f000     : 0                1          1          0          1         
+0x7f1d6d090000     : 0                1          1          0          1         
+0x7f1d6d091000     : 0                1          1          0          1         
+0x7f1d6d092000     : 0                1          1          0          1         
+0x7f1d6d093000     : 0                1          1          0          1         
+0x7f1d6d094000     : 0                1          1          0          1         
+0x7f1d6d095000     : 0                1          1          0          1         
+0x7f1d6d096000     : 0                1          1          0          1         
+0x7f1d6d097000     : 0                1          1          0          1         
+0x7f1d6d098000     : 0                1          1          0          1         
+0x7f1d6d099000     : 0                1          1          0          1         
+0x7f1d6d09a000     : 0                1          1          0          1         
+0x7f1d6d09b000     : 0                1          1          0          1         
+0x7f1d6d09c000     : 0                1          1          0          1         
+0x7f1d6d09d000     : 0                1          1          0          1         
+0x7f1d6d09e000     : 0                1          1          0          1         
+0x7f1d6d09f000     : 0                1          1          0          1         
+0x7f1d6d0a0000     : 0                1          1          0          1         
+0x7f1d6d0a1000     : 0                1          1          0          1         
+0x7f1d6d0a2000     : 0                1          1          0          1         
+0x7f1d6d0a3000     : 0                1          1          0          1         
+0x7f1d6d0a4000     : 0                1          1          0          1         
+0x7f1d6d0a5000     : 0                1          1          0          1         
+0x7f1d6d0a6000     : 0                1          1          0          1         
+0x7f1d6d0a7000     : 0                1          1          0          1         
+0x7f1d6d0a8000     : 0                1          1          0          1         
+0x7f1d6d0a9000     : 0                1          1          0          1         
+0x7f1d6d0aa000     : 0                1          1          0          1         
+0x7f1d6d0ab000     : 0                1          1          0          1         
+0x7f1d6d0ac000     : 0                1          1          0          1         
+0x7f1d6d0ad000     : 0                1          1          0          1         
+0x7f1d6d0ae000     : 0                1          1          0          1         
+0x7f1d6d0af000     : 0                1          1          0          1         
+0x7f1d6d0b0000     : 0                1          1          0          1         
+0x7f1d6d0b1000     : 0                1          1          0          1         
+0x7f1d6d0b2000     : 0                1          1          0          1         
+0x7f1d6d0b3000     : 0                1          1          0          1         
+0x7f1d6d0b4000     : 0                1          1          0          1         
+0x7f1d6d0b5000     : 0                1          1          0          1         
+0x7f1d6d0b6000     : 0                1          1          0          1         
+0x7f1d6d0b7000     : 0                1          1          0          1         
+0x7f1d6d0b8000     : 0                1          1          0          1         
+0x7f1d6d0b9000     : 0                1          1          0          1         
+0x7f1d6d0ba000     : 0                1          1          0          1         
+0x7f1d6d0bb000     : 0                1          1          0          1         
+0x7f1d6d0bc000     : 0                1          1          0          1         
+0x7f1d6d0bd000     : 0                1          1          0          1         
+0x7f1d6d0be000     : 0                1          1          0          1         
+0x7f1d6d0bf000     : 0                1          1          0          1         
+0x7f1d6d0c0000     : 0                1          1          0          1         
+0x7f1d6d0c1000     : 0                1          1          0          1         
+0x7f1d6d0c2000     : 0                1          1          0          1         
+0x7f1d6d0c3000     : 0                1          1          0          1         
+0x7f1d6d0c4000     : 0                1          1          0          1         
+0x7f1d6d0c5000     : 0                1          1          0          1         
+0x7f1d6d0c6000     : 0                1          1          0          1         
+0x7f1d6d0c7000     : 0                1          1          0          1         
+0x7f1d6d0c8000     : 0                1          1          0          1         
+0x7f1d6d0c9000     : 0                1          1          0          1         
+0x7f1d6d0ca000     : 0                1          1          0          1         
+0x7f1d6d0cb000     : 0                1          1          0          1         
+0x7f1d6d0cc000     : 0                1          1          0          1         
+0x7f1d6d0cd000     : 0                1          1          0          1         
+0x7f1d6d0ce000     : 0                1          1          0          1         
+0x7f1d6d0cf000     : 0                1          1          0          1         
+0x7f1d6d0d0000     : 0                1          0          0          0         
+0x7f1d6d0d1000     : 0                1          1          0          1         
+0x7f1d6d0d2000     : 0                1          1          0          1         
+0x7f1d6d0d3000     : 0                1          1          0          1         
+0x7f1d6d0d4000     : 0                1          1          0          1         
+0x7f1d6d0d5000     : 0                1          1          0          1         
+0x7f1d6d0d6000     : 0                1          1          0          1         
+0x7f1d6d0d7000     : 0                1          1          0          1         
+0x7f1d6d0d8000     : 0                1          1          0          1         
+0x7f1d6d0d9000     : 0                1          1          0          1         
+0x7f1d6d0da000     : 0                1          1          0          1         
+0x7f1d6d0db000     : 0                1          1          0          1         
+0x7f1d6d0dc000     : 0                1          1          0          1         
+0x7f1d6d0dd000     : 0                1          1          0          1         
+0x7f1d6d0de000     : 0                1          1          0          1         
+0x7f1d6d0df000     : 0                1          1          0          1         
+0x7f1d6d0e0000     : 0                1          1          0          1         
+0x7f1d6d0e1000     : 0                1          1          0          1         
+0x7f1d6d0e2000     : 0                1          1          0          1         
+0x7f1d6d0e3000     : 0                1          1          0          1         
+0x7f1d6d0e4000     : 0                1          1          0          1         
+0x7f1d6d0e5000     : 0                1          1          0          1         
+0x7f1d6d0e6000     : 0                1          1          0          1         
+0x7f1d6d0e7000     : 0                1          1          0          1         
+0x7f1d6d0e8000     : 0                1          1          0          1         
+0x7f1d6d0e9000     : 0                1          1          0          1         
+0x7f1d6d0ea000     : 0                1          1          0          1         
+0x7f1d6d0eb000     : 0                1          1          0          1         
+0x7f1d6d0ec000     : 0                1          1          0          1         
+0x7f1d6d0ed000     : 0                1          1          0          1         
+0x7f1d6d0ee000     : 0                1          1          0          1         
+0x7f1d6d0ef000     : 0                1          1          0          1         
+0x7f1d6d0f0000     : 0                1          1          0          1         
+0x7f1d6d0f1000     : 0                1          1          0          1         
+0x7f1d6d0f2000     : 0                1          1          0          1         
+0x7f1d6d0f3000     : 0                1          1          0          1         
+0x7f1d6d0f4000     : 0                1          1          0          1         
+0x7f1d6d0f5000     : 0                1          1          0          1         
+0x7f1d6d0f6000     : 0                1          1          0          1         
+0x7f1d6d0f7000     : 0                1          1          0          1         
+0x7f1d6d0f8000     : 0                1          1          0          1         
+0x7f1d6d0f9000     : 0                1          1          0          1         
+0x7f1d6d0fa000     : 0                1          1          0          1         
+0x7f1d6d0fb000     : 0                1          1          0          1         
+0x7f1d6d0fc000     : 0                1          1          0          1         
+0x7f1d6d0fd000     : 0                1          1          0          1         
+0x7f1d6d0fe000     : 0                1          1          0          1         
+0x7f1d6d0ff000     : 0                1          1          0          1         
+0x7f1d6d100000     : 0                1          1          0          1         
+0x7f1d6d101000     : 0                1          1          0          1         
+0x7f1d6d102000     : 0                1          1          0          1         
+0x7f1d6d103000     : 0                1          1          0          1         
+0x7f1d6d104000     : 0                1          1          0          1         
+0x7f1d6d105000     : 0                1          1          0          1         
+0x7f1d6d106000     : 0                1          1          0          1         
+0x7f1d6d107000     : 0                1          1          0          1         
+0x7f1d6d108000     : 0                1          1          0          1         
+0x7f1d6d109000     : 0                1          1          0          1         
+0x7f1d6d10a000     : 0                1          1          0          1         
+0x7f1d6d10b000     : 0                1          1          0          1         
+0x7f1d6d10c000     : 0                1          1          0          1         
+0x7f1d6d10d000     : 0                1          1          0          1         
+0x7f1d6d10e000     : 0                1          1          0          1         
+0x7f1d6d10f000     : 0                1          1          0          1         
+0x7f1d6d110000     : 0                1          1          0          1         
+0x7f1d6d111000     : 0                1          1          0          1         
+0x7f1d6d112000     : 0                1          1          0          1         
+0x7f1d6d113000     : 0                1          1          0          1         
+0x7f1d6d114000     : 0                1          1          0          1         
+0x7f1d6d115000     : 0                1          1          0          1         
+0x7f1d6d116000     : 0                1          1          0          1         
+0x7f1d6d117000     : 0                1          1          0          1         
+0x7f1d6d118000     : 0                1          1          0          1         
+0x7f1d6d119000     : 0                1          1          0          1         
+0x7f1d6d11a000     : 0                1          1          0          1         
+0x7f1d6d11b000     : 0                1          1          0          1         
+0x7f1d6d11c000     : 0                1          1          0          1         
+0x7f1d6d11d000     : 0                1          1          0          1         
+0x7f1d6d11e000     : 0                1          1          0          1         
+0x7f1d6d11f000     : 0                1          1          0          1         
+0x7f1d6d120000     : 0                1          1          0          1         
+0x7f1d6d121000     : 0                1          1          0          1         
+0x7f1d6d122000     : 0                1          1          0          1         
+0x7f1d6d123000     : 0                1          1          0          1         
+0x7f1d6d124000     : 0                1          1          0          1         
+0x7f1d6d125000     : 0                1          1          0          1         
+0x7f1d6d126000     : 0                1          1          0          1         
+0x7f1d6d127000     : 0                1          1          0          1         
+0x7f1d6d128000     : 0                1          1          0          1         
+0x7f1d6d129000     : 0                1          1          0          1         
+0x7f1d6d12a000     : 0                1          1          0          1         
+0x7f1d6d12b000     : 0                1          1          0          1         
+0x7f1d6d12c000     : 0                1          1          0          1         
+0x7f1d6d12d000     : 0                1          1          0          1         
+0x7f1d6d12e000     : 0                1          1          0          1         
+0x7f1d6d12f000     : 0                1          1          0          1         
+0x7f1d6d130000     : 0                1          1          0          1         
+0x7f1d6d131000     : 0                1          1          0          1         
+0x7f1d6d132000     : 0                1          1          0          1         
+0x7f1d6d133000     : 0                1          1          0          1         
+0x7f1d6d134000     : 0                1          1          0          1         
+0x7f1d6d135000     : 0                1          1          0          1         
+0x7f1d6d136000     : 0                1          1          0          1         
+0x7f1d6d137000     : 0                1          1          0          1         
+0x7f1d6d138000     : 0                1          1          0          1         
+0x7f1d6d139000     : 0                1          1          0          1         
+0x7f1d6d13a000     : 0                1          1          0          1         
+0x7f1d6d13b000     : 0                1          1          0          1         
+0x7f1d6d13c000     : 0                1          1          0          1         
+0x7f1d6d13d000     : 0                1          1          0          1         
+0x7f1d6d13e000     : 0                1          1          0          1         
+0x7f1d6d13f000     : 0                1          1          0          1         
+0x7f1d6d140000     : 0                1          0          0          0         
+0x7f1d6d141000     : 0                1          0          0          0         
+0x7f1d6d142000     : 0                1          0          0          0         
+0x7f1d6d143000     : 0                1          0          0          0         
+0x7f1d6d144000     : 0                1          0          0          0         
+0x7f1d6d145000     : 0                1          0          0          0         
+0x7f1d6d146000     : 0                1          0          0          0         
+0x7f1d6d147000     : 0                1          0          0          0         
+0x7f1d6d148000     : 0                1          0          0          0         
+0x7f1d6d149000     : 0                1          0          0          0         
+0x7f1d6d14a000     : 0                1          0          0          0         
+0x7f1d6d14b000     : 0                1          0          0          0         
+0x7f1d6d14c000     : 0                1          0          0          0         
+0x7f1d6d14d000     : 0                1          0          0          0         
+0x7f1d6d14e000     : 0                1          0          0          0         
+0x7f1d6d14f000     : 0                1          0          0          0         
+0x7f1d6d150000     : 0                1          0          0          0         
+0x7f1d6d151000     : 0                1          0          0          0         
+0x7f1d6d152000     : 0                1          0          0          0         
+0x7f1d6d153000     : 0                1          0          0          0         
+0x7f1d6d154000     : 0                1          0          0          0         
+0x7f1d6d155000     : 0                1          0          0          0         
+0x7f1d6d156000     : 0                1          0          0          0         
+0x7f1d6d157000     : 0                1          0          0          0         
+0x7f1d6d158000     : 0                1          0          0          0         
+0x7f1d6d159000     : 0                1          0          0          0         
+0x7f1d6d15a000     : 0                1          0          0          0         
+0x7f1d6d15b000     : 0                1          0          0          0         
+0x7f1d6d15c000     : 0                1          0          0          0         
+0x7f1d6d15d000     : 0                1          0          0          0         
+0x7f1d6d15e000     : 0                1          0          0          0         
+0x7f1d6d15f000     : 0                1          0          0          0         
+0x7f1d6d160000     : 0                1          0          0          0         
+0x7f1d6d161000     : 0                1          0          0          0         
+0x7f1d6d162000     : 0                1          0          0          0         
+0x7f1d6d163000     : 0                1          0          0          0         
+0x7f1d6d164000     : 0                1          0          0          0         
+0x7f1d6d165000     : 0                1          0          0          0         
+0x7f1d6d166000     : 0                1          0          0          0         
+0x7f1d6d167000     : 0                1          0          0          0         
+0x7f1d6d168000     : 0                1          0          0          0         
+0x7f1d6d169000     : 0                1          0          0          0         
+0x7f1d6d16a000     : 0                1          0          0          0         
+0x7f1d6d16b000     : 0                1          0          0          0         
+0x7f1d6d16c000     : 0                1          0          0          0         
+0x7f1d6d16d000     : 0                1          0          0          0         
+0x7f1d6d16e000     : 0                1          0          0          0         
+0x7f1d6d16f000     : 0                1          0          0          0         
+0x7f1d6d170000     : 0                1          0          0          0         
+0x7f1d6d171000     : 0                1          0          0          0         
+0x7f1d6d172000     : 0                1          0          0          0         
+0x7f1d6d173000     : 0                1          0          0          0         
+0x7f1d6d174000     : 0                1          0          0          0         
+0x7f1d6d175000     : 0                1          0          0          0         
+0x7f1d6d176000     : 0                1          0          0          0         
+0x7f1d6d177000     : 0                1          0          0          0         
+0x7f1d6d178000     : 0                1          0          0          0         
+0x7f1d6d179000     : 0                1          0          0          0         
+0x7f1d6d17a000     : 0                1          0          0          0         
+0x7f1d6d17b000     : 0                1          0          0          0         
+0x7f1d6d17c000     : 0                1          0          0          0         
+0x7f1d6d17d000     : 0                1          0          0          0         
+0x7f1d6d17e000     : 0                1          0          0          0         
+0x7f1d6d17f000     : 0                1          0          0          0         
+0x7f1d6d180000     : 0                1          1          0          1         
+0x7f1d6d181000     : 0                1          1          0          1         
+0x7f1d6d182000     : 0                1          1          0          1         
+0x7f1d6d183000     : 0                1          1          0          1         
+0x7f1d6d184000     : 0                1          1          0          1         
+0x7f1d6d185000     : 0                1          1          0          1         
+0x7f1d6d186000     : 0                1          1          0          1         
+0x7f1d6d187000     : 0                1          1          0          1         
+0x7f1d6d188000     : 0                1          1          0          1         
+0x7f1d6d189000     : 0                1          1          0          1         
+0x7f1d6d18a000     : 0                1          1          0          1         
+0x7f1d6d18b000     : 0                1          1          0          1         
+0x7f1d6d18c000     : 0                1          1          0          1         
+0x7f1d6d18d000     : 0                1          0          0          0         
+0x7f1d6d18e000     : 0                1          1          0          1         
+0x7f1d6d18f000     : 0                1          1          0          1         
+0x7f1d6d190000     : 0                1          0          0          0         
+0x7f1d6d191000     : 0                1          0          0          0         
+0x7f1d6d192000     : 0                1          0          0          0         
+0x7f1d6d193000     : 0                1          0          0          0         
+0x7f1d6d194000     : 0                1          0          0          0         
+0x7f1d6d195000     : 0                1          0          0          0         
+0x7f1d6d196000     : 0                1          0          0          0         
+0x7f1d6d197000     : 0                1          0          0          0         
+0x7f1d6d198000     : 0                1          0          0          0         
+0x7f1d6d199000     : 0                1          0          0          0         
+0x7f1d6d19a000     : 0                1          0          0          0         
+0x7f1d6d19b000     : 0                1          0          0          0         
+0x7f1d6d19c000     : 0                1          0          0          0         
+0x7f1d6d19d000     : 0                1          0          0          0         
+0x7f1d6d19e000     : 0                1          0          0          0         
+0x7f1d6d19f000     : 0                1          0          0          0         
+0x7f1d6d1a0000     : 0                1          1          0          1         
+0x7f1d6d1a1000     : 0                1          1          0          1         
+0x7f1d6d1a2000     : 0                1          1          0          1         
+0x7f1d6d1a3000     : 0                1          1          0          1         
+0x7f1d6d1a4000     : 0                1          1          0          1         
+0x7f1d6d1a5000     : 0                1          1          0          1         
+0x7f1d6d1a6000     : 0                1          1          0          1         
+0x7f1d6d1a7000     : 0                1          1          0          1         
+0x7f1d6d1a8000     : 0                1          1          0          1         
+0x7f1d6d1a9000     : 0                1          1          0          1         
+0x7f1d6d1aa000     : 0                1          1          0          1         
+0x7f1d6d1ab000     : 0                1          1          0          1         
+0x7f1d6d1ac000     : 0                1          0          0          0         
+0x7f1d6d1ad000     : 0                1          1          0          1         
+0x7f1d6d1ae000     : 0                1          1          0          1         
+0x7f1d6d1af000     : 0                1          1          0          1         
+0x7f1d6d1b0000     : 0                1          0          0          0         
+0x7f1d6d1b1000     : 0                1          0          0          0         
+0x7f1d6d1b2000     : 0                1          0          0          0         
+0x7f1d6d1b3000     : 0                1          0          0          0         
+0x7f1d6d1b4000     : 0                1          0          0          0         
+0x7f1d6d1b5000     : 0                1          0          0          0         
+0x7f1d6d1b6000     : 0                1          0          0          0         
+0x7f1d6d1b7000     : 0                1          0          0          0         
+0x7f1d6d1b8000     : 0                1          0          0          0         
+0x7f1d6d1b9000     : 0                1          0          0          0         
+0x7f1d6d1ba000     : 0                1          0          0          0         
+0x7f1d6d1bb000     : 0                1          0          0          0         
+0x7f1d6d1bc000     : 0                1          0          0          0         
+0x7f1d6d1bd000     : 0                1          0          0          0         
+0x7f1d6d1be000     : 0                1          0          0          0         
+0x7f1d6d1bf000     : 0                1          0          0          0         
+0x7f1d6d1c0000     : 0                1          1          0          1         
+0x7f1d6d1c1000     : 0                1          1          0          1         
+0x7f1d6d1c2000     : 0                1          1          0          1         
+0x7f1d6d1c3000     : 0                1          1          0          1         
+0x7f1d6d1c4000     : 0                1          1          0          1         
+0x7f1d6d1c5000     : 0                1          1          0          1         
+0x7f1d6d1c6000     : 0                1          1          0          1         
+0x7f1d6d1c7000     : 0                1          1          0          1         
+0x7f1d6d1c8000     : 0                1          1          0          1         
+0x7f1d6d1c9000     : 0                1          1          0          1         
+0x7f1d6d1ca000     : 0                1          1          0          1         
+0x7f1d6d1cb000     : 0                1          1          0          1         
+0x7f1d6d1cc000     : 0                1          1          0          1         
+0x7f1d6d1cd000     : 0                1          1          0          1         
+0x7f1d6d1ce000     : 0                1          1          0          1         
+0x7f1d6d1cf000     : 0                1          1          0          1         
+0x7f1d6d1d0000     : 0                1          0          0          0         
+0x7f1d6d1d1000     : 0                1          0          0          0         
+0x7f1d6d1d2000     : 0                1          0          0          0         
+0x7f1d6d1d3000     : 0                1          0          0          0         
+0x7f1d6d1d4000     : 0                1          0          0          0         
+0x7f1d6d1d5000     : 0                1          0          0          0         
+0x7f1d6d1d6000     : 0                1          0          0          0         
+0x7f1d6d1d7000     : 0                1          0          0          0         
+0x7f1d6d1d8000     : 0                1          0          0          0         
+0x7f1d6d1d9000     : 0                1          0          0          0         
+0x7f1d6d1da000     : 0                1          0          0          0         
+0x7f1d6d1db000     : 0                1          0          0          0         
+0x7f1d6d1dc000     : 0                1          0          0          0         
+0x7f1d6d1dd000     : 0                1          0          0          0         
+0x7f1d6d1de000     : 0                1          0          0          0         
+0x7f1d6d1df000     : 0                1          0          0          0         
+0x7f1d6d1e0000     : 0                1          0          0          0         
+0x7f1d6d1e1000     : 0                1          0          0          0         
+0x7f1d6d1e2000     : 0                1          0          0          0         
+0x7f1d6d1e3000     : 0                1          0          0          0         
+0x7f1d6d1e4000     : 0                1          0          0          0         
+0x7f1d6d1e5000     : 0                1          0          0          0         
+0x7f1d6d1e6000     : 0                1          0          0          0         
+0x7f1d6d1e7000     : 0                1          0          0          0         
+0x7f1d6d1e8000     : 0                1          0          0          0         
+0x7f1d6d1e9000     : 0                1          0          0          0         
+0x7f1d6d1ea000     : 0                1          0          0          0         
+0x7f1d6d1eb000     : 0                1          0          0          0         
+0x7f1d6d1ec000     : 0                1          0          0          0         
+0x7f1d6d1ed000     : 0                1          0          0          0         
+0x7f1d6d1ee000     : 0                1          0          0          0         
+0x7f1d6d1ef000     : 0                1          0          0          0         
+0x7f1d6d1f0000     : 0                1          0          0          0         
+0x7f1d6d1f1000     : 0                1          0          0          0         
+0x7f1d6d1f2000     : 0                1          0          0          0         
+0x7f1d6d1f3000     : 0                1          0          0          0         
+0x7f1d6d1f4000     : 0                1          0          0          0         
+0x7f1d6d1f5000     : 0                1          0          0          0         
+0x7f1d6d1f6000     : 0                1          0          0          0         
+0x7f1d6d1f7000     : 0                1          0          0          0         
+0x7f1d6d1f8000     : 0                1          0          0          0         
+0x7f1d6d1f9000     : 0                1          0          0          0         
+0x7f1d6d1fa000     : 0                1          0          0          0         
+0x7f1d6d1fb000     : 0                1          0          0          0         
+0x7f1d6d1fc000     : 0                1          0          0          0         
+0x7f1d6d1fd000     : 0                1          0          0          0         
+0x7f1d6d1fe000     : 0                1          0          0          0         
+0x7f1d6d1ff000     : 0                1          0          0          1         
+0x7f1d6d200000     : 0                1          0          0          1         
+0x7f1d6d201000     : 0                1          0          0          1         
+0x7f1d6d202000     : 0                1          0          0          1         
+0x7f1d6d203000     : 0                1          0          0          1         
+0x7f1d6d204000     : 0                1          0          0          1         
+0x7f1d6d205000     : 0                1          0          0          1         
+0x7f1d6d206000     : 0                1          0          0          0         
+0x7f1d6d207000     : 0                1          0          0          0         
+0x7f1d6d208000     : 0                1          0          0          0         
+0x7f1d6d209000     : 0                1          0          0          1         
+0x7f1d6d20a000     : 0                1          0          0          1         
+0x7f1d6d20b000     : 0                1          0          0          1         
+0x7f1d6d20c000     : 0                1          0          0          0         
+0x7f1d6d20d000     : 0                1          0          0          0         
+0x7f1d6d20e000     : 0                1          0          0          0         
+0x7f1d6d20f000     : 0                1          0          0          0         
+0x7f1d6d210000     : 0                1          0          0          0         
+0x7f1d6d211000     : 0                1          0          0          1         
+0x7f1d6d23c000     : 0                1          0          0          1         
+0x7f1d6d23d000     : 0                1          0          0          1         
+0x7f1d6d23e000     : 0                1          0          0          0         
+0x7f1d6d24d000     : 0                1          0          0          1         
+0x7f1d6d24e000     : 0                1          0          0          0         
+0x7f1d6d24f000     : 0                1          0          0          0         
+0x7f1d6d250000     : 0                1          0          0          0         
+0x7f1d6d251000     : 0                1          0          0          0         
+0x7f1d6d252000     : 0                1          0          0          0         
+0x7f1d6d253000     : 0                1          1          0          1         
+0x7f1d6d254000     : 0                1          1          0          1         
+0x7f1d6d255000     : 0                1          1          0          1         
+0x7f1d6d256000     : 0                1          1          0          1         
+0x7f1d6d257000     : 0                1          1          0          1         
+0x7f1d6d258000     : 0                1          1          0          1         
+0x7f1d6d259000     : 0                1          1          0          1         
+0x7f1d6d25a000     : 0                1          1          0          1         
+0x7f1d6d25b000     : 0                1          1          0          1         
+0x7f1d6d25c000     : 0                1          1          0          1         
+0x7f1d6d25d000     : 0                1          1          0          1         
+0x7f1d6d25e000     : 0                1          1          0          1         
+0x7f1d6d25f000     : 0                1          1          0          1         
+0x7f1d6d260000     : 0                1          1          0          1         
+0x7f1d6d261000     : 0                1          1          0          1         
+0x7f1d6d262000     : 0                1          1          0          1         
+0x7f1d6d263000     : 0                1          1          0          1         
+0x7f1d6d264000     : 0                1          1          0          1         
+0x7f1d6d265000     : 0                1          1          0          1         
+0x7f1d6d266000     : 0                1          1          0          1         
+0x7f1d6d267000     : 0                1          1          0          1         
+0x7f1d6d268000     : 0                1          1          0          1         
+0x7f1d6d269000     : 0                1          1          0          1         
+0x7f1d6d26a000     : 0                1          1          0          1         
+0x7f1d6d26b000     : 0                1          1          0          1         
+0x7f1d6d26c000     : 0                1          1          0          1         
+0x7f1d6d26d000     : 0                1          1          0          1         
+0x7f1d6d26e000     : 0                1          1          0          1         
+0x7f1d6d26f000     : 0                1          1          0          1         
+0x7f1d6d270000     : 0                1          1          0          1         
+0x7f1d6d271000     : 0                1          1          0          1         
+0x7f1d6d272000     : 0                1          1          0          1         
+0x7f1d6d273000     : 0                1          1          0          1         
+0x7f1d6d274000     : 0                1          1          0          1         
+0x7f1d6d275000     : 0                1          1          0          1         
+0x7f1d6d276000     : 0                1          1          0          1         
+0x7f1d6d277000     : 0                1          1          0          1         
+0x7f1d6d278000     : 0                1          1          0          1         
+0x7f1d6d279000     : 0                1          1          0          1         
+0x7f1d6d27a000     : 0                1          1          0          1         
+0x7f1d6d27b000     : 0                1          1          0          1         
+0x7f1d6d27c000     : 0                1          1          0          1         
+0x7f1d6d27d000     : 0                1          1          0          1         
+0x7f1d6d27e000     : 0                1          1          0          1         
+0x7f1d6d27f000     : 0                1          1          0          1         
+0x7f1d6d280000     : 0                1          0          0          0         
+0x7f1d6d281000     : 0                1          1          0          1         
+0x7f1d6d282000     : 0                1          1          0          1         
+0x7f1d6d283000     : 0                1          1          0          1         
+0x7f1d6d284000     : 0                1          1          0          1         
+0x7f1d6d285000     : 0                1          1          0          1         
+0x7f1d6d286000     : 0                1          1          0          1         
+0x7f1d6d287000     : 0                1          1          0          1         
+0x7f1d6d288000     : 0                1          1          0          1         
+0x7f1d6d289000     : 0                1          1          0          1         
+0x7f1d6d28a000     : 0                1          1          0          1         
+0x7f1d6d28b000     : 0                1          0          0          1         
+0x7f1d6d28c000     : 0                1          0          0          1         
+0x7f1d6d28d000     : 0                1          0          0          1         
+0x7f1d6d28e000     : 0                1          0          0          1         
+0x7fffac547000     : 0                0          0          0          0         
+0x7fffac548000     : 0                0          0          0          0         
+0x7fffac549000     : 0                0          0          0          0         
+0x7fffac54a000     : 0                0          0          0          0         
+0x7fffac54b000     : 0                0          0          0          0         
+0x7fffac54c000     : 0                0          0          0          0         
+0x7fffac54d000     : 0                0          0          0          0         
+0x7fffac54e000     : 0                0          0          0          0         
+0x7fffac54f000     : 0                0          0          0          0         
+0x7fffac550000     : 0                0          0          0          0         
+0x7fffac551000     : 0                0          0          0          0         
+0x7fffac552000     : 0                0          0          0          0         
+0x7fffac553000     : 0                0          0          0          0         
+0x7fffac554000     : 0                0          0          0          0         
+0x7fffac555000     : 0                0          0          0          0         
+0x7fffac556000     : 0                0          0          0          0         
+0x7fffac557000     : 0                0          0          0          0         
+0x7fffac558000     : 0                0          0          0          0         
+0x7fffac559000     : 0                0          0          0          0         
+0x7fffac55a000     : 0                0          0          0          0         
+0x7fffac55b000     : 0                0          0          0          0         
+0x7fffac55c000     : 0                0          0          0          0         
+0x7fffac55d000     : 0                0          0          0          0         
+0x7fffac55e000     : 0                0          0          0          0         
+0x7fffac55f000     : 0                0          0          0          0         
+0x7fffac560000     : 0                0          0          0          0         
+0x7fffac561000     : 0                0          0          0          0         
+0x7fffac562000     : 0                0          0          0          0         
+0x7fffac563000     : 0                0          0          0          0         
+0x7fffac564000     : 0                0          0          0          0         
+0x7fffac565000     : 0                1          0          0          1         
+0x7fffac566000     : 0                1          0          0          1         
+0x7fffac567000     : 0                1          0          0          1         
+0xffffffffff600000 : 0                1          0          0          1         
 
 ROOT:/
 
 STAT:
-(1) pid  '59539'
+(1) pid  '5810'
 (2) comm '(c.out)'
 (3) state  'S'
-(4) ppid  '18806'
-(5) pgrp  '59539'
-(6) session  '18806'
+(4) ppid  '3896'
+(5) pgrp  '5810'
+(6) session  '3896'
 (7) tty_nr  '34818'
-(8) tpgid  '59539'
+(8) tpgid  '5810'
 (9) flags  '4194304'
-(10) minflt  '90'
+(10) minflt  '97'
 (11) cminflt  '0'
 (12) majflt  '0'
 (13) cmajflt  '0'
@@ -315,13 +796,13 @@ STAT:
 (19) nice  '0'
 (20) num_threads  '1'
 (21) itrealvalue  '0'
-(22) starttime  '2691037'
-(23) vsize  '2609152'
-(24) rss  '314'
+(22) starttime  '242065'
+(23) vsize  '2744320'
+(24) rss  '389'
 (25) rsslim  '18446744073709551615'
-(26) startcode  '99116313616384'
-(27) endcode  '99116313618693'
-(28) startstack  '140725105711088'
+(26) startcode  '99199745105920'
+(27) endcode  '99199745108257'
+(28) startstack  '140736084732448'
 (29) kstkesp  '0'
 (30) kstkeip  '0'
 (31) signal  '0'
@@ -332,34 +813,39 @@ STAT:
 (36) nswap  '0'
 (37) cnswap  '0'
 (38) exit_signal  '17'
-(39) processor  '0'
+(39) processor  '7'
 (40) rt_priority  '0'
 (41) policy  '0'
 (42) delayacct_blkio_ticks  '0'
 (43) guest_time  '0'
 (44) cguest_time  '0'
-(45) start_data  '99116313627936'
-(46) end_data  '99116313628692'
-(47) start_brk  '99117305409536'
-(48) arg_start  '140725105713533'
-(49) arg_end  '140725105713541'
-(50) env_start  '140725105713541'
-(51) env_end  '140725105717232'
+(45) start_data  '99199745117472'
+(46) end_data  '99199745118228'
+(47) start_brk  '99200721993728'
+(48) arg_start  '140736084734333'
+(49) arg_end  '140736084734341'
+(50) env_start  '140736084734341'
+(51) env_end  '140736084738032'
 (52) exit_code  '0
 '
+size     /home/tshyana/Desktop/proc_info/task-03/c.out  (1)
 
 STATM: 
-size     637  (1)
-resident 314  (2)
-shared   314  (3)
+size     670  (1)
+resident 389  (2)
+shared   389  (3)
 text     1  (4)
 lib      0  (5)
-data     56  (6)
+data     89  (6)
 dt       0
-  (7)
+810  (7)
 
 TASK:
 .
 ..
-59539
+5810
+[?2004h]0;tshyana@Ubuntu: ~/Desktop/proc_info[01;32mtshyana@Ubuntu[00m:[01;34m~/Desktop/proc_info[00m$ exit
+[?2004l
+exit
 
+Script done on 2025-03-16 15:40:21+00:00 [COMMAND_EXIT_CODE="0"]
