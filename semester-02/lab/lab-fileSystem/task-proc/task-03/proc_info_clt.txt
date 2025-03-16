@@ -99,7 +99,7 @@ MAPS:
 ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]
 
 PAGEMAP
- addr              : pfn         soft-dirty  file/shared swapped    present
+    addr           : pfn         soft-dirty  file/shared swapped    present
 0x5a38bd919000     : 0                1          1          0          1         
 0x5a38bd91a000     : 0                1          1          0          1         
 0x5a38bd91b000     : 0                1          1          0          1         
