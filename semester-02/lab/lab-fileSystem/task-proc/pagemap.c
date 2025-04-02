@@ -85,7 +85,6 @@ int read_pagemap(char * path_buf, unsigned long virt_addr){
    }
    printf("\n");
    printf("Result: 0x%llx\n", (unsigned long long) read_val);
-   //if(GET_BIT(read_val, 63))
    if(GET_BIT(read_val, 63))
       printf("PFN: 0x%llx\n",(unsigned long long) GET_PFN(read_val));
    else
