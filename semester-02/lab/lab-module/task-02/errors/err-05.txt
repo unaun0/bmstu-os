@@ -1,0 +1,21 @@
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo insmod md1.ko
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo dmesg | tail -1
+[ 3876.352692] + module md1 start!
+
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo insmod md3.ko
+insmod: ERROR: could not insert module md3.ko: Operation not permitted
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo dmesg | tail -4
+[ 3876.352692] + module md1 start!
+[ 3917.256303] + module md3 start!
+[ 3917.256308] + data string exported from md1 : Hello World!
+[ 3917.256309] + string returned md1_proc() is : Hello World!
+
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ lsmod | grep md
+Module                  Size  Used by
+md1                    12288  0
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo rmmod md3
+rmmod: ERROR: Module md3 is not currently loaded
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo rmmod md1
+
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo dmesg | tail -1
+[ 4229.442375] + module md1 unloaded!

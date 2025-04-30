@@ -1,0 +1,53 @@
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ make
+make -C /lib/modules/6.8.0-57-generic/build M=/home/parallels/Desktop/task-02 modules
+make[1]: Entering directory '/usr/src/linux-headers-6.8.0-57-generic'
+warning: the compiler differs from the one used to build the kernel
+  The kernel was built by: x86_64-linux-gnu-gcc-12 (Ubuntu 12.3.0-1ubuntu1~22.04) 12.3.0
+  You are using:           gcc-12 (Ubuntu 12.3.0-1ubuntu1~22.04) 12.3.0
+  CC [M]  /home/parallels/Desktop/task-02/md2.o
+In file included from ./include/asm-generic/bug.h:22,
+                 from ./arch/x86/include/asm/bug.h:87,
+                 from ./include/linux/bug.h:5,
+                 from ./arch/x86/include/asm/paravirt.h:19,
+                 from ./arch/x86/include/asm/cpuid.h:62,
+                 from ./arch/x86/include/asm/processor.h:19,
+                 from ./arch/x86/include/asm/timex.h:5,
+                 from ./include/linux/timex.h:67,
+                 from ./include/linux/time32.h:13,
+                 from ./include/linux/time.h:60,
+                 from ./include/linux/stat.h:19,
+                 from ./include/linux/module.h:13,
+                 from /home/parallels/Desktop/task-02/md2.c:2:
+/home/parallels/Desktop/task-02/md2.c: In function ‘md_init’:
+/home/parallels/Desktop/task-02/md2.c:15:52: error: implicit declaration of function ‘md1_local’ [-Werror=implicit-function-declaration]
+   15 |     printk("+ string returned md1_local() : %s\n", md1_local()); // 1
+      |                                                    ^~~~~~~~~
+./include/linux/printk.h:429:33: note: in definition of macro ‘printk_index_wrap’
+  429 |                 _p_func(_fmt, ##__VA_ARGS__);                           \
+      |                                 ^~~~~~~~~~~
+/home/parallels/Desktop/task-02/md2.c:15:5: note: in expansion of macro ‘printk’
+   15 |     printk("+ string returned md1_local() : %s\n", md1_local()); // 1
+      |     ^~~~~~
+/home/parallels/Desktop/task-02/md2.c:15:12: warning: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Wformat=]
+   15 |     printk("+ string returned md1_local() : %s\n", md1_local()); // 1
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~
+      |                                                    |
+      |                                                    int
+./include/linux/printk.h:429:25: note: in definition of macro ‘printk_index_wrap’
+  429 |                 _p_func(_fmt, ##__VA_ARGS__);                           \
+      |                         ^~~~
+/home/parallels/Desktop/task-02/md2.c:15:5: note: in expansion of macro ‘printk’
+   15 |     printk("+ string returned md1_local() : %s\n", md1_local()); // 1
+      |     ^~~~~~
+/home/parallels/Desktop/task-02/md2.c:15:46: note: format string is defined here
+   15 |     printk("+ string returned md1_local() : %s\n", md1_local()); // 1
+      |                                             ~^
+      |                                              |
+      |                                              char *
+      |                                             %d
+cc1: some warnings being treated as errors
+make[3]: *** [scripts/Makefile.build:243: /home/parallels/Desktop/task-02/md2.o] Error 1
+make[2]: *** [/usr/src/linux-headers-6.8.0-57-generic/Makefile:1925: /home/parallels/Desktop/task-02] Error 2
+make[1]: *** [Makefile:240: __sub-make] Error 2
+make[1]: Leaving directory '/usr/src/linux-headers-6.8.0-57-generic'
+make: *** [Makefile:12: all] Error 2

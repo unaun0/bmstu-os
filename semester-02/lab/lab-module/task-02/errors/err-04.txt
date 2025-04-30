@@ -1,0 +1,27 @@
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo insmod md2.ko
+[sudo] password for parallels: 
+insmod: ERROR: could not insert module md2.ko: Unknown symbol in module
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo dmesg | tail -2
+[ 2944.620502] md2: Unknown symbol md1_data (err -2)
+[ 2944.620514] md2: Unknown symbol md1_proc (err -2)
+
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo insmod md1.ko
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo insmod md2.ko
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ lsmod | grep md
+Module                  Size  Used by
+md2                    12288  0
+md1                    12288  1 md2
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo dmesg | tail -4
+[ 2984.482506] + module md1 start!
+[ 2987.689136] + module md2 start!
+[ 2987.689141] + data string exported from md1 : Hello World!
+[ 2987.689143] + string returned md1_proc() is : Hello World!
+
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo rmmod md1
+rmmod: ERROR: Module md1 is in use by: md2
+
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo rmmod md2
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo rmmod md1
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/task-02$ sudo dmesg | tail -2
+[ 3531.873609] + module md2 unloaded!
+[ 3534.322976] + module md1 unloaded!
