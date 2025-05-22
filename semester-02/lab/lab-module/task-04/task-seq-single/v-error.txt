@@ -1,0 +1,135 @@
+Вывод терминала:
+
+...
+==> Запись PID 1
+==> Запись PID 2
+==> Запись PID 3
+==> Чтение из /proc файла
+Killed
+
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/seq$ sudo dmesg | tail -100
+...
+[ 5491.350153] *) show
+[ 5491.350154] *) SEQ_BUF_SIZE: 4096 bytes = 1 pages
+[ 5491.350155] *) m = 000000002d2e96ab, v = 00000000106fca27
+[ 5491.350159] BUG: kernel NULL pointer dereference, address: 0000000000000001
+    - Ошибка: ядро попыталось разыменовать NULL-указатель, адрес: 0x0000000000000001
+[ 5491.350162] #PF: supervisor read access in kernel mode
+    - #PF (Page Fault): ошибка доступа к странице памяти при чтении из режима ядра
+[ 5491.350164] #PF: error_code(0x0000) - not-present page
+    - #PF (Page Fault): код ошибки: 0x0000, что означает «страница отсутствует».
+[ 5491.350165] PGD 0 P4D 0 
+    - Значения регистров таблиц страниц: PGD (Page Global Directory) и P4D (Page 4th-level Directory) 
+      равны 0, что указывает на отсутствие валидной таблицы страниц для нужного адреса.
+[ 5491.350168] Oops: 0000 [#1] PREEMPT SMP PTI
+    — Oops — это сообщение об ошибке ядра.
+    — 0000 — код ошибки.
+    — [#1] — номер ошибки (первая ошибка с момента запуска).
+    — PREEMPT — ядро поддерживает вытеснение процессов (preemptive scheduling).
+    — SMP — симметричная многопроцессорность (ядро работает на нескольких CPU).
+    — PTI — Page Table Isolation (защита от уязвимости Meltdown).
+[ 5491.350180] CPU: 0 PID: 26677 Comm: cat Tainted: P OE 6.8.0-59-generic #61~22.04.1-Ubuntu
+    — Процессор: CPU 0.
+    — PID (идентификатор процесса): 26677.
+    — Имя процесса: cat.
+    — Tainted: P OE — ядро в «запятнанном» состоянии.
+    — Версия ядра: 6.8.0-59-generic Ubuntu.
+[ 5491.350184] Hardware name: Parallels International GmbH. Parallels Virtual Platform/Parallels Virtual Platform, BIOS 19.3.0 (54924) 03/01/2024
+    — Информация о железе: запущено в виртуальной машине Parallels. BIOS версия и дата.
+[ 5491.350186] RIP: 0010:single_show+0x56/0x1c0 [my_module]
+    — RIP — указатель инструкции (IP) в момент ошибки.
+    — Ошибка возникла в функции single_show модуле ядра my_module, смещение +0x56 байт от начала функции.
+[ 5491.350194] Code: 91 b7 c0 48 89 f2 48 c1 ea 0c e8 85 ce 23 e9 48 89 da 4c 89 ee 48 c7 c7 0e 91 b7 c0 e8 73 ce 23 e9 48 85 db 0f 84 1e 01 00 00 <8b> 33 48 c7 c7 23 91 b7 c0 e8 5c ce 23 e9 8b 05 e6 24 00 00 85 c0
+    - Машинный код рядом с адресом ошибки. Символ <8b> выделяет инструкцию, где произошла ошибка.
+[ 5491.350196] RSP: 0018:ffffab2380fafc70 EFLAGS: 00010202
+    — RSP — указатель стека (stack pointer) на момент ошибки.
+    — EFLAGS — регистр флагов процессора.
+[ 5491.350198] RAX: 000000000000002d RBX: 0000000000000001 RCX: 0000000000000000
+    — Значения регистров общего назначения процессора (RAX, RBX, RCX).
+[ 5491.350200] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+    — Значения регистров RDX, RSI, RDI.
+[ 5491.350201] RBP: ffffab2380fafc98 R08: 0000000000000000 R09: 0000000000000000
+    — Значения регистров RBP, R08, R09.
+[ 5491.350202] R10: 0000000000000000 R11: 0000000000000000 R12: ffffab2380fafd40
+    — Значения регистров R10, R11, R12.
+[ 5491.350203] R13: ffff8e7bc33b2d98 R14: 0000000000000001 R15: ffff8e7bc33b2d98
+    — Значения регистров R13, R14, R15.
+[ 5491.350205] FS:  0000707ead8db740(0000) GS:ffff8e7c3ce00000(0000) knlGS:0000000000000000
+    — Значения сегментных регистров FS, GS и knlGS.
+[ 5491.350207] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+    — Значения регистров сегментов и контрольных регистров CR0.
+[ 5491.350208] CR2: 0000000000000001 CR3: 0000000014f64004 CR4: 00000000003706f0
+    — CR2 — регистр содержит адрес, который вызвал ошибку (страница, к которой пытались обратиться). 
+            В данном случае — 0x1, что совпадает с NULL-указателем + 1.
+    — CR3 — адрес таблицы страниц текущего процесса.
+    — CR4 — расширенные флаги управления процессором.
+[ 5491.350209] Call Trace:
+    - Начало трассировки вызовов ядра (backtrace) — вывод стека вызовов после ошибки 
+      (например, паники или page fault).
+[ 5491.350211]  <TASK>
+[ 5491.350214]  ? show_regs+0x6d/0x80
+[ 5491.350220]  ? __die+0x24/0x80
+[ 5491.350223]  ? page_fault_oops+0x99/0x1b0
+[ 5491.350227]  ? do_user_addr_fault+0x2f4/0x680
+[ 5491.350230]  ? exc_page_fault+0x83/0x1b0
+[ 5491.350235]  ? asm_exc_page_fault+0x27/0x30
+[ 5491.350240]  ? single_show+0x56/0x1c0 [my_module]
+[ 5491.350242]  seq_read_iter+0x135/0x4a0
+[ 5491.350246]  ? vprintk_emit+0xd9/0x220
+[ 5491.350249]  seq_read+0x11e/0x160
+[ 5491.350252]  my_read+0x3c/0x70 [my_module]
+[ 5491.350254]  proc_reg_read+0x6c/0xb0
+[ 5491.350257]  vfs_read+0xb4/0x390
+[ 5491.350261]  ksys_read+0x73/0x100
+[ 5491.350263]  __x64_sys_read+0x19/0x30
+[ 5491.350265]  x64_sys_call+0x201e/0x2480
+[ 5491.350268]  do_syscall_64+0x81/0x170
+[ 5491.350271]  ? irqentry_exit_to_user_mode+0x78/0x260
+[ 5491.350273]  ? irqentry_exit+0x43/0x50
+[ 5491.350276]  ? exc_page_fault+0x94/0x1b0
+[ 5491.350278]  entry_SYSCALL_64_after_hwframe+0x78/0x80
+[ 5491.350282] RIP: 0033:0x707ead7147e2
+[ 5491.350291] Code: c0 e9 b2 fe ff ff 50 48 8d 3d 8a b4 0c 00 e8 a5 1d 02 00 0f 1f 44 00 00 f3 0f 1e fa 64 8b 04 25 18 00 00 00 85 c0 75 10 0f 05 <48> 3d 00 f0 ff ff 77 56 c3 0f 1f 44 00 00 48 83 ec 28 48 89 54 24
+[ 5491.350292] RSP: 002b:00007ffc61b6e818 EFLAGS: 00000246 ORIG_RAX: 0000000000000000
+[ 5491.350294] RAX: ffffffffffffffda RBX: 0000000000020000 RCX: 0000707ead7147e2
+[ 5491.350296] RDX: 0000000000020000 RSI: 0000707ead8ba000 RDI: 0000000000000003
+[ 5491.350297] RBP: 0000707ead8ba000 R08: 0000707ead8b9010 R09: 0000707ead8b9010
+[ 5491.350298] R10: 0000000000000022 R11: 0000000000000246 R12: 0000000000022000
+[ 5491.350300] R13: 0000000000000003 R14: 0000000000020000 R15: 0000000000020000
+[ 5491.350302]  </TASK>
+[ 5491.350303] Modules linked in: my_module(OE) usblp prl_fs_freeze(POE) prl_fs(POE) intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core intel_vsec pmt_telemetry pmt_class snd_hda_codec_generic snd_hda_intel x86_pkg_temp_thermal snd_intel_dspcfg snd_intel_sdw_acpi coretemp snd_hda_codec crct10dif_pclmul polyval_clmulni polyval_generic ghash_clmulni_intel sha256_ssse3 sha1_ssse3 snd_hda_core aesni_intel snd_hwdep crypto_simd cryptd binfmt_misc snd_pcm rapl nls_iso8859_1 snd_seq_midi snd_seq_midi_event snd_rawmidi snd_seq uvcvideo videobuf2_vmalloc input_leds snd_seq_device uvc serio_raw videobuf2_memops snd_timer videobuf2_v4l2 videodev snd joydev virtio_gpu videobuf2_common mc soundcore sbs virtio_dma_buf sbshc pvpanic_mmio pvpanic mac_hid sch_fq_codel msr parport_pc ppdev lp ramoops reed_solomon parport pstore_blk pstore_zone efi_pstore ip_tables x_tables autofs4 hid_generic usbhid i2c_i801 gpio_ich crc32_pclmul psmouse i2c_smbus hid ahci libahci lpc_ich prl_tg(POE) pata_acpi xhci_pci
+[ 5491.350361]  xhci_pci_renesas [last unloaded: my_module(OE)]
+[ 5491.350366] CR2: 0000000000000001
+[ 5491.350368] ---[ end trace 0000000000000000 ]---
+    - Конец трассировки стека, связанной с ошибкой или исключением.
+[ 5491.350369] RIP: 0010:single_show+0x56/0x1c0 [my_module]
+[ 5491.350372] Code: 91 b7 c0 48 89 f2 48 c1 ea 0c e8 85 ce 23 e9 48 89 da 4c 89 ee 48 c7 c7 0e 91 b7 c0 e8 73 ce 23 e9 48 85 db 0f 84 1e 01 00 00 <8b> 33 48 c7 c7 23 91 b7 c0 e8 5c ce 23 e9 8b 05 e6 24 00 00 85 c0
+[ 5491.350373] RSP: 0018:ffffab2380fafc70 EFLAGS: 00010202
+[ 5491.350375] RAX: 000000000000002d RBX: 0000000000000001 RCX: 0000000000000000
+[ 5491.350376] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+[ 5491.350377] RBP: ffffab2380fafc98 R08: 0000000000000000 R09: 0000000000000000
+[ 5491.350378] R10: 0000000000000000 R11: 0000000000000000 R12: ffffab2380fafd40
+[ 5491.350379] R13: ffff8e7bc33b2d98 R14: 0000000000000001 R15: ffff8e7bc33b2d98
+[ 5491.350381] FS:  0000707ead8db740(0000) GS:ffff8e7c3ce00000(0000) knlGS:0000000000000000
+[ 5491.350382] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 5491.350383] CR2: 0000000000000001 CR3: 0000000014f64004 CR4: 00000000003706f0
+[ 5491.350385] note: cat[26677] exited with irqs disabled
+    - Процесс cat с PID 26677 завершился, находясь с отключёнными прерываниями (irqs disabled).
+      Прерывания должны быть включены снова до выхода из ядра в пользовательское пространство. 
+      Если процесс падает или выходит с отключёнными IRQ, это может указывать на баг в драйвере 
+      или модуле ядра.
+[ 5491.350606] *) release
+    - Поскольку это сообщение идёт после аварии (Oops и RIP: single_show), это значит, 
+      что ядро продолжает попытку корректно освободить ресурсы, и release() вызывается, 
+      несмотря на сбой в single_show(). Однако сам процесс (например, cat) всё ещё находился 
+      в плохом состоянии (с отключёнными IRQ), и завершение было не совсем «чистым».
+
+parallels@ubuntu-linux-22-04-02-desktop:~/Desktop/seq$ cat /proc/modules | grep my_module
+my_module 12288 -1 - Unloading 0x0000000000000000 (OE-)
+    - Модуль ядра my_module находится в аномальном и нестабильном состоянии.
+    - Отрицательное значение счётчика ссылок refcount означает, 
+      что внутренняя логика управления жизненным циклом модуля нарушена.
+    - Модуль находится в процессе выгрузки - Unloading, но завершить её не удалось. 
+      Чаще всего это связано с зависшими открытыми дескрипторами или неосвобождёнными структурами 
+      (seq_file, /proc, kthread, таймеры и т.д.).
+    - Единственное решение: полная перезагрузка системы.

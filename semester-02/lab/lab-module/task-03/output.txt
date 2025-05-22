@@ -1,0 +1,33 @@
+[24043.634190] + fortune: init
+[24043.634219] + fortune: loaded
+
+12345
+gfhg
+chto-to
+
+4026532372 dr-xr-xr-x   2 root             root                           0 May  7 12:09 fortuneDir
+4026532368 -rw-rw-rw-   1 root             root                           0 May  7 12:09 fortuneFile
+4026532373 lrwxrwxrwx   1 root             root                          10 May  7 12:09 fortuneLink -> fortuneDir
+
+[24043.674022] + fortune: open called
+[24043.674165] + fortune: write called
+[24043.674171] + fortune: release called
+[24043.674182] + fortune: open called
+[24043.674188] + fortune: write called
+[24043.674189] + fortune: release called
+[24043.674212] + fortune: open called
+[24043.674218] + fortune: write called
+[24043.674219] + fortune: release called
+[24043.676991] + fortune: open called
+[24043.677005] + fortune: read called
+[24043.677231] + fortune: read called
+[24043.677253] + fortune: release called
+[24043.680626] + fortune: open called
+[24043.680640] + fortune: read called
+[24043.680686] + fortune: read called
+[24043.680703] + fortune: release called
+[24043.682040] + fortune: open called
+[24043.682053] + fortune: read called
+[24043.682066] + fortune: read called
+[24043.682081] + fortune: release called
+[24043.703366] + fortune: exit
