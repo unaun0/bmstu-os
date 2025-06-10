@@ -13,9 +13,7 @@ clean:
 	@rm -fR .tmp*
 	@rm -rf .tmp_versions
 	@rm *.ko *.mod
-
-disclean: clean remove_files
-	@rm *.ko *.symvers *.mod
+	@rm *.symvers
 
 load:
 	sudo insmod ${TARGET}.ko
@@ -23,31 +21,26 @@ load:
 remove:
 	sudo rmmod ${TARGET}.ko
 
-modelue_info:
+minfo:
 	modinfo ${TARGET}.ko
+	sudo lsmod | grep main
 
 logs:
-	dmesg | grep a23fs
-
-create_files:
-	@touch daemontool
-	@mkdir fs_dir
-
-remove_files:
-	@rm daemontool
-	@rm -rf fs_dir
+	sudo dmesg | grep myvfs
 
 mount:
-	sudo mount -o loop -t a23fs ./daemontool ./fs_dir
+	@mkdir fs_dir
+	sudo mount -t myvfs none ./fs_dir
 
-fs_info:
-	cat /proc/filesystems | grep a23fs
-	mount | grep a23fs
+fsinfo:
+	cat /proc/filesystems | grep myvfs
+	mount | grep myvfs
 
 unmount:
 	sudo umount ./fs_dir
+	@rm -rf fs_dir
 	
-slab_info:
-	sudo cat /proc/slabinfo | grep a23fs
+sinfo:
+	sudo cat /proc/slabinfo | grep myvfs
 
 	

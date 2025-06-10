@@ -1,173 +1,145 @@
-#include <linux/module.h> 
-#include <linux/kernel.h> 
-#include <linux/init.h>  
-#include <linux/fs.h>
+#include <linux/module.h>
+#include <linux/kernel.h>
 #include <linux/slab.h>
+#include <linux/fs.h>
 #include <linux/time.h>
 
-// Лицензия модуля ядра
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Tskhovrebova Yana");
-MODULE_DESCRIPTION("VFS");
+MODULE_ALIAS("myvfs");
+MODULE_VERSION("1.0");
 
-// Уникальный идентификатор файловой системы
-#define A23FS_MAGIC 0xDEADBEEF
-#define SLAB_NAME "a23fs_slab"
+#define MAGIC_NUMBER 0xB16B00B5
+#define SLAB_NAME "myvfs_cache"
 
-// Определение собственной структуры inode
-struct myfs_inode {
-    int i_mode;                      // Режим (тип и права доступа)
-    unsigned long i_ino;            // Номер inode
-} myfs_inode;
-
-// Счётчик, используемый в конструкторе slab
-static int sco = 0;
-static int number = 31;             // Просто число (не используется в коде)
-
-// Указатель на кеш slab-allocator'а
-struct kmem_cache *cache = NULL; 
-static void **line = NULL;         // Указатель на массив указателей для slab
-static int size = sizeof(struct myfs_inode); // Размер объекта в кеше
-
-// Конструктор slab-объекта
-void co(void* p) { 
-    *(int*)p = (int)p;              // Присваивает указателю значение как int
-    sco++;                          // Увеличивает счётчик конструкций
-}
-
-// Создание inode в рамках суперблока
-static struct inode *myfs_make_inode(struct super_block *sb, int mode) {
-    struct inode *ret = new_inode(sb);  // Выделяет новый inode
-    if (ret) {
-        inode_init_owner(&init_user_ns, ret, NULL, mode); // Устанавливает владельца и права
-        ret->i_size = PAGE_SIZE;      // Размер страницы
-        ret->i_atime = ret->i_mtime = ret->i_ctime = current_time(ret); // Устанавливает временные метки
-        ret->i_private = &myfs_inode; // Приватное поле, ссылается на нашу структуру
-    }
-    printk(KERN_INFO "+: a23fs - new inode was creared\n");
-    return ret;
-}
-
-// Освобождение суперблока
-static void myfs_put_super(struct super_block *sb) {
-    printk(KERN_INFO "+: a23fs - super block was destroyed\n");
-}
-
-// Операции с суперблоком
-static struct super_operations const myfs_super_ops = {
-    .put_super = myfs_put_super,          // Функция уничтожения суперблока
-    .statfs = simple_statfs,              // Используется стандартная функция statfs
-    .drop_inode = generic_delete_inode,   // Удаление inode
+struct myvfs_inode {
+    int i_mode;
+    unsigned long i_ino;
 };
 
-// Инициализация суперблока при монтировании
-static int myfs_fill_sb(struct super_block *sb, void *data, int silent) {
-    struct inode *root = NULL;
+static void myvfs_put_super(struct super_block *sb) {
+    printk(KERN_INFO "+ myvfs: myfs_put_super\n");
+}
 
-    sb->s_blocksize = PAGE_SIZE;          // Размер блока
-    sb->s_blocksize_bits = PAGE_SHIFT;   // Смещение для блока
-    sb->s_op = &myfs_super_ops;          // Операции суперблока
-    sb->s_magic = A23FS_MAGIC;           // Уникальный номер ФС
+static int myvfs_statfs(struct dentry *dentry, struct kstatfs *buf) {
+    printk(KERN_INFO "+ myvfs: call myvfs_statfs\n");
+    return simple_statfs(dentry, buf);
+}
 
-    root = myfs_make_inode(sb, S_IFDIR | 0755); // Создание корневого inode (каталог)
+int myvfs_delete_inode(struct inode *inode) {
+    printk(KERN_INFO "+ myvfs: call myvfs_delete_inode\n");
+    return generic_delete_inode(inode);
+}
 
-    if (!root) {
-        printk(KERN_ERR "+: a23fs inode allocation failed\n");
+static struct super_operations const myvfs_super_operations = {
+    .put_super = myvfs_put_super,
+    .statfs = myvfs_statfs,
+    .drop_inode = myvfs_delete_inode,
+};
+
+static int myvfs_fill_super(struct super_block *sb, void *data, int silent) {
+    printk(KERN_INFO "+ myvfs: call myvfs_fill_super\n");
+    sb->s_blocksize = PAGE_SIZE;
+    sb->s_blocksize_bits = PAGE_SHIFT;
+    sb->s_magic = MAGIC_NUMBER;
+    sb->s_op = &myvfs_super_operations;
+    sb->s_time_gran = 1;
+    struct inode *inode = new_inode(sb);
+    if (!inode) {
+        printk(KERN_ERR "+ myvfs: ERR: new_inode\n");
         return -ENOMEM;
     }
-
-    root->i_op = &simple_dir_inode_operations; // Операции над каталогами
-    root->i_fop = &simple_dir_operations;      // Файловые операции для каталогов
-    sb->s_root = d_make_root(root);            // Создание корневого dentry
-
+    inode_set_atime_to_ts(inode, current_time(inode));
+    inode_set_mtime_to_ts(inode, current_time(inode));
+    inode_set_ctime_to_ts(inode, current_time(inode));
+    inode->i_ino = 1;  
+    inode->i_mode = S_IFDIR | 0755;
+    inode->i_op = &simple_dir_inode_operations;
+    inode->i_fop = &simple_dir_operations;
+    set_nlink(inode, 2);
+    sb->s_root = d_make_root(inode);
     if (!sb->s_root) {
-        printk(KERN_ERR "+: a23fs root creation failed\n");
-        iput(root);
+        printk(KERN_ERR "+ myvfs: ERR: d_make_root\n");
+        iput(inode);
         return -ENOMEM;
     }
-
-    printk(KERN_INFO "+: a23fs - root was creared\n");
     return 0;
 }
 
-// Монтирование файловой системы
-static struct dentry *myfs_mount(struct file_system_type *type, int flags, char const *dev, void *data)
-{
-    struct dentry *const entry = mount_nodev(type, flags, data, myfs_fill_sb); // Без устройства
-
-    if (IS_ERR(entry)) {
-        printk(KERN_ERR "+: a23fs mounting failed\n");
-    } else {
-        printk(KERN_DEBUG "+: a23fs mounted\n");
-    }
-
+static struct dentry *myvfs_mount(struct file_system_type *type, int flags, const char *dev, void *data) {
+    struct dentry *const entry = mount_nodev(type, flags, data, myvfs_fill_super);
+    if (IS_ERR(entry))
+        printk(KERN_ERR "+ myvfs: mounting failed\n");
+    else
+        printk(KERN_INFO "+ myvfs: mounted\n");
     return entry;
 }
 
-// Демонтирование ФС
-static void myfs_kill_anon_super(struct super_block *sb)
-{
-    printk(KERN_INFO "+: a23fs - My kill_anon_super\n");
-    return kill_anon_super(sb); // Освобождает анонимный суперблок
+static void myvfs_kill_super(struct super_block *sb) {
+    printk(KERN_INFO "+ myvfs: call myvfs_kill_super\n");
+    kill_anon_super(sb);
 }
 
-// Регистрация ФС
-static struct file_system_type myfs_type = {
+static struct file_system_type myvfs_type = {
     .owner = THIS_MODULE,
-    .name = "a23fs",
-    .mount = myfs_mount,
-    .kill_sb = myfs_kill_anon_super,
+    .name = "myvfs",
+    .mount = myvfs_mount,
+    .kill_sb = myvfs_kill_super,
+    .fs_flags = FS_USERNS_MOUNT
 };
 
-// Загрузка модуля ядра
-static int __init myfs_init(void)
+static struct kmem_cache *cache = NULL;
+static void **cache_mem = NULL;
+static int cached_count = 256;
+module_param(cached_count, int, 0);
+
+void f_init(void *p)
 {
-    line = kmalloc(sizeof(void*), GFP_KERNEL); // Выделение памяти под указатель
-    if(!line) { 
-        printk(KERN_ERR "+: kmalloc error\n"); 
-        return -ENOMEM;
-    }
- 
-	cache = kmem_cache_create(SLAB_NAME, size, 0, 0, co); // Создание кеша slab
-    if(!cache) { 
-        printk(KERN_ERR "+: kmem_cache_create error\n"); 
-        kfree(line); 
-	    return -ENOMEM;  
-    } 
+    *(int *)p = (int)p;
+}
 
-    if (!((*line) = kmem_cache_alloc(cache, GFP_KERNEL))) { // Выделение объекта из кеша
-        printk(KERN_ERR "+: kmem_cache_alloc error\n"); 
-        kmem_cache_free(cache, *line);
-        kmem_cache_destroy(cache);
-        kfree(line);
-        return -ENOMEM;
-    }
-
-    int ret = register_filesystem(&myfs_type); // Регистрация файловой системы
-    if (ret != 0) {
-        printk(KERN_ERR "+: a23fs module cannot register filesystem\n");
+static int __init myvfs_init(void) {
+    int ret = register_filesystem(&myvfs_type);
+    if (ret) {
+        printk(KERN_ERR "+ myvfs: can't register_filesystem\n");
         return ret;
     }
-
-    printk(KERN_INFO "+: a23fs_module loaded\n");
+    if (NULL == (cache_mem = kmalloc(sizeof(struct myvfs_inode *) * PAGE_SIZE, GFP_KERNEL))) {
+        printk(KERN_ERR "+ myvfs: can't kmalloc cache\n");
+        return -ENOMEM;
+    }
+    if (NULL == (cache = kmem_cache_create(SLAB_NAME, sizeof(struct myvfs_inode), 0, SLAB_HWCACHE_ALIGN, f_init))) {
+        printk(KERN_ERR "+ myvfs: can't kmem_cache_create\n");
+        kmem_cache_destroy(cache);
+        kfree(cache_mem);
+        return -ENOMEM;
+    }
+    for (int i = 0; i < cached_count; i++) {
+        if (NULL == (cache_mem[i] = kmem_cache_alloc(cache, GFP_KERNEL))) {
+            printk(KERN_ERR "+ myvfs: can't kmem_cache_alloc\n");
+            kmem_cache_free(cache, *cache_mem);
+            kmem_cache_destroy(cache);
+            kfree(cache_mem);
+            return -ENOMEM;
+        }
+    }
+    printk(KERN_INFO "+ myvfs: alloc %d objects into slab: %s\n", cached_count, SLAB_NAME);
+    printk(KERN_INFO "+ myvfs: object size %ld bytes, full size %ld bytes\n", sizeof(struct myvfs_inode), sizeof(struct myvfs_inode *) * PAGE_SIZE);
+    printk(KERN_INFO "+ myvfs: module loaded\n");
     return 0;
 }
 
-// Выгрузка модуля ядра
-static void __exit myfs_exit(void)
-{
-    kmem_cache_free(cache, *line);     // Освобождение объекта кеша
-    kmem_cache_destroy(cache);         // Уничтожение кеша
-    kfree(line);                       // Освобождение line
-
-    int ret = unregister_filesystem(&myfs_type); // Отмена регистрации ФС
-    if (ret != 0) {
-        printk(KERN_ERR "+: a23fs_module cannot unregister filesystem\n");
+static void __exit myvfs_exit(void) {
+    int ret = unregister_filesystem(&myvfs_type);
+    if (ret)
+        printk(KERN_ERR "+ myvfs: can't unregister_filesystem\n");
+    for (int i = 0; i < cached_count; i++) {
+        if (cache_mem[i]) kmem_cache_free(cache, cache_mem[i]);
     }
-
-    printk(KERN_DEBUG "+: a23fs_module unloaded\n");
+    kfree(cache_mem);
+    kmem_cache_destroy(cache);
+    printk(KERN_INFO "+ myvfs: module unloaded\n");
 }
 
-// Установка точек входа и выхода
-module_init(myfs_init);
-module_exit(myfs_exit);
+module_init(myvfs_init);
+module_exit(myvfs_exit);

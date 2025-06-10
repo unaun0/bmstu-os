@@ -1,0 +1,91 @@
+tshyana@tshyana:/media/lab-vfs$ sudo insmod main.ko
+
+tshyana@tshyana:/media/lab-vfs$ modinfo main.ko
+filename:       /media/lab-vfs/main.ko
+version:        1.0
+alias:          myvfs
+author:         Tskhovrebova Yana
+license:        GPL
+srcversion:     D53E2C9352357FB9EC2D3CE
+depends:        
+retpoline:      Y
+name:           main
+vermagic:       6.11.0-26-generic SMP preempt mod_unload modversions 
+parm:           cached_count:int
+tshyana@tshyana:/media/lab-vfs$ sudo lsmod | grep main
+main                   12288  1
+
+
+tshyana@tshyana:/media/lab-vfs$ sudo dmesg | grep myvfs
+[ 1119.977125] + myvfs: alloc 256 objects into slab: myvfs_cache
+[ 1119.977134] + myvfs: object size 16 bytes, full size 32768 bytes
+[ 1119.977137] + myvfs: module loaded
+
+tshyana@tshyana:/media/lab-vfs/$ cat /proc/filesystems | grep myvfs
+nodev	myvfs
+tshyana@tshyana:/medialab-vfs mount | grep myvfs
+tshyana@tshyana:/media/lab-vfs$
+
+tshyana@tshyana:/media/lab-vfs$ sudo mount -t myvfs none ./fs_dir
+
+tshyana@tshyana:/media/lab-vfs$ cat /proc/mounts
+...
+none /media/lab-vfs/fs_dir myvfs rw,relatime 0 0
+
+tshyana@tshyana:/media/lab-vfs$ mount | grep myvfs
+none on /media/lab-vfs/fs_dir type myvfs (rw,relatime)
+
+tshyana@tshyana:/media/lab-vfs$ sudo dmesg | grep myvfs
+[ 1119.977125] + myvfs: alloc 256 objects into slab: myvfs_cache
+[ 1119.977134] + myvfs: object size 16 bytes, full size 32768 bytes
+[ 1119.977137] + myvfs: module loaded
+[ 1952.317318] + myvfs: call myvfs_fill_super
+[ 1952.317348] + myvfs: mounted
+
+tshyana@tshyana:/media/lab-vfs$ sudo cat /proc/slabinfo | grep myvfs
+myvfs_cache 256 256 32 128 1 : tunables 0 0 0 : slabdata 2 2 0
+
+tshyana@tshyana:/media/lab-vfs$ sudo rmmod main.ko
+rmmod: ERROR: Module main is in use
+tshyana@tshyana:/media/lab-vfs$ sudo umount ./fs_dir
+tshyana@tshyana:/media/lab-vfs$ cat /proc/filesystems | grep myvfs
+nodev	myvfs
+tshyana@tshyana:/media/lab-vfs$ mount | grep myvfs
+
+tshyana@tshyana:/media/lab-vfs$  sudo rmmod main.ko
+tshyana@tshyana:/media/lab-vfs$  cat /proc/filesystems | grep myvfs
+
+tshyana@tshyana:/media/lab-vfs$ sudo dmesg | grep myvfs
+[ 1119.977125] + myvfs: alloc 256 objects into slab: myvfs_cache
+[ 1119.977134] + myvfs: object size 16 bytes, full size 32768 bytes
+[ 1119.977137] + myvfs: module loaded
+[ 1952.317318] + myvfs: call myvfs_fill_super
+[ 1952.317348] + myvfs: mounted
+[ 2388.933680] + myvfs: call myvfs_kill_super
+[ 2388.933690] + myvfs: call myvfs_delete_inode
+[ 2388.933699] + myvfs: myfs_put_super
+[ 2472.543692] + myvfs: module unloaded
+
+...
+
+tshyana@tshyana:/media/lab-vfs$ make sinfo
+sudo cat /proc/slabinfo | grep myvfs
+myvfs_cache 384 384 32 128 1 : tunables 0 0 0 : slabdata 3 3 0
+
+...
+
+tshyana@tshyana:/media/lab-vfs$ sudo mount -t myvfs none ./fs_dir
+tshyana@tshyana:/media/lab-vfs$ sudo lsmod | grep main
+main                   12288  1
+tshyana@tshyana:/media/lab-vfs$ sudo cat /proc/slabinfo | grep myvfs
+myvfs_cache          256    256     32  128    1 : tunables    0    0    0 : slabdata      2      2      0
+tshyana@tshyana:/media/lab-vfs$ sudo mount -t myvfs none ./fs_dir2
+tshyana@tshyana:/media/lab-vfs$ sudo lsmod | grep main
+main                   12288  2
+tshyana@tshyana:/media/lab-vfs$ mount | grep myvfs
+none on /media/lab-vfs/fs_dir type myvfs (rw,relatime)
+none on /media/lab-vfs/fs_dir2 type myvfs (rw,relatime)
+tshyana@tshyana:/media/lab-vfs$ sudo cat /proc/slabinfo | grep myvfs
+myvfs_cache          256    256     32  128    1 : tunables    0    0    0 : slabdata      2      2      0
+
+...
