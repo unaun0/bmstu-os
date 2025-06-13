@@ -90,7 +90,7 @@ static struct file_system_type myvfs_type = {
 
 static struct kmem_cache *cache = NULL;
 static void **cache_mem = NULL;
-static int cached_count = 256;
+static int cached_count = 128;
 module_param(cached_count, int, 0);
 
 void f_init(void *p)
@@ -124,7 +124,10 @@ static int __init myvfs_init(void) {
         }
     }
     printk(KERN_INFO "+ myvfs: alloc %d objects into slab: %s\n", cached_count, SLAB_NAME);
-    printk(KERN_INFO "+ myvfs: object size %ld bytes, full size %ld bytes\n", sizeof(struct myvfs_inode), sizeof(struct myvfs_inode *) * PAGE_SIZE);
+    printk(KERN_INFO "+ myvfs: object size %ld bytes, full size %ld bytes\n", 
+        sizeof(struct myvfs_inode), 
+        sizeof(struct myvfs_inode *) * PAGE_SIZE
+    );
     printk(KERN_INFO "+ myvfs: module loaded\n");
     return 0;
 }
